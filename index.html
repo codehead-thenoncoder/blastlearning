@@ -118,7 +118,7 @@
   }
   </script>
 
-  <!-- JSON-LD: Block 3 - FAQPage (All 13 approved questions) -->
+  <!-- JSON-LD: Block 3 - FAQPage (5 Approved FAQs) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -126,74 +126,10 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What is Study Guide?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A lesson, an interactive podcast, and a schedule of study sessions are built by Study Guide from the class material you upload. It works for any subject and level, because the content comes from your files."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is Study Guide free to try?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. The first two weeks are free for every new sign-up made through the form on this page."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Which files can I add?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can upload PDFs, Word documents, slide decks, handwritten notes as scans or photos, and audio recordings of lectures."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What do I need before I start?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You only need the material for at least one chapter or topic. A full syllabus is helpful, but you can add more material as your class progresses."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does a plan take to build?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Most study plans and lessons are ready within a few minutes of uploading your material."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does Study Guide include JEE or NEET material?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Study Guide uses the material you upload. If you add JEE or NEET notes, past papers, or syllabus chapters, the plan, lessons, and questions will be built from those files."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I use it for more than one class?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. You can create multiple classes, each with its own files, study plan, and schedule."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can my tutor or teacher assign a course to me?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. If your tutor or school uses Study Guide, they can assign a course directly to your account. Your study plan will follow their syllabus, and your tutor will be able to follow your progress."
-        }
-      },
-      {
-        "@type": "Question",
         "name": "What is Study Guide for tutors?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Study Guide lets tutors turn their teaching material into structured courses, assign them to students, and follow each student's progress through a single dashboard."
+          "text": "A tutor or teacher can define a course from their own material, assign it to students, and follow each student's progress while the students study at their own pace."
         }
       },
       {
@@ -201,7 +137,7 @@
         "name": "Can each student study at their own pace?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. While all students follow the same course material, their study sessions and revision rounds adapt to their individual schedule, mastery, and exam dates."
+          "text": "Yes. Every student works through the course at a pace that suits them, and the questions adapt to the answers that student gives."
         }
       },
       {
@@ -209,7 +145,7 @@
         "name": "What can I see about each student?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "You can see completed sessions, current chapter, scores on practice questions, areas where the student struggled, and their projected date for completing the course."
+          "text": "The progress of each student can be checked individually by the tutor or teacher who assigned the course, so you do not need to wait for a test to find out where a student stands."
         }
       },
       {
@@ -217,7 +153,7 @@
         "name": "Do I need to prepare new material?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. You use your existing lecture notes, problem sets, handouts, and recordings. Study Guide structures them into lessons, podcasts, and study sessions."
+          "text": "No. The course is built from the notes, slides, files, and recordings you already teach from."
         }
       },
       {
@@ -225,7 +161,7 @@
         "name": "Can I use one course with different groups of students?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. You set up the course once and assign it to individual students or batches. Each student or batch has an independent study plan and schedule."
+          "text": "Yes. A course is defined once and can be assigned to different students whenever you need it."
         }
       }
     ]
@@ -1494,254 +1430,6 @@ header.elementor-55.elementor-location-header {
     max-width: 100%;
     border-radius: 14px;
   }
-}
-
-/* ====================================================================
-   ACT 2: HERO -> BERRY TRANSITION (CONTINUITY BRIDGE)
-   ==================================================================== */
-#study-guide-page .act-gateway {
-  position: relative;
-  background: var(--cream);
-  padding: 80px 24px;
-}
-#study-guide-page .gateway-split {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-}
-@media (min-width: 768px) {
-  #study-guide-page .gateway-split { grid-template-columns: 1fr 1fr; }
-}
-#study-guide-page .gateway-portal {
-  background: var(--white);
-  border-radius: 20px;
-  padding: 40px 32px;
-  border: 1.5px solid var(--border-subtle);
-  transition: all var(--dur-fast) ease;
-  cursor: pointer;
-}
-#study-guide-page .gateway-portal:hover {
-  transform: translateY(-4px);
-  border-color: var(--berry);
-  box-shadow: 0 16px 40px rgba(168, 0, 90, 0.08);
-}
-#study-guide-page .portal-tag {
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--berry);
-  margin-bottom: 12px;
-}
-#study-guide-page .portal-heading {
-  font-size: 1.75rem;
-  font-weight: 800;
-  color: var(--ink);
-  margin-bottom: 12px;
-}
-#study-guide-page .portal-summary {
-  font-size: 1rem;
-  color: var(--ink-secondary);
-  line-height: 1.6;
-  margin-bottom: 24px;
-}
-#study-guide-page .portal-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 700;
-  color: var(--berry);
-  text-decoration: none;
-  font-size: 0.95rem;
-}
-
-/* Continuous Transition Banner into Berry */
-#study-guide-page .hero-berry-funnel {
-  position: relative;
-  text-align: center;
-  padding: 60px 24px 20px;
-  max-width: 980px;
-  margin: 0 auto;
-}
-#study-guide-page .funnel-statement {
-  font-family: var(--font-display);
-  font-size: clamp(1.4rem, 3.2vw, 2.2rem);
-  font-weight: 900;
-  letter-spacing: -0.01em;
-  color: var(--ink);
-  text-transform: uppercase;
-}
-#study-guide-page .funnel-arrow {
-  display: inline-flex;
-  margin-top: 16px;
-  color: var(--berry);
-  animation: bounceDown 2s infinite;
-}
-@keyframes bounceDown {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(8px); }
-}
-
-/* ====================================================================
-   ACT 3: THE BERRY TRANSFORMATION (KINETIC DATA CONDUIT)
-   ==================================================================== */
-#study-guide-page .act-berry-transformation {
-  position: relative;
-  background: linear-gradient(180deg, #A8005A 0%, #7E0043 100%);
-  color: var(--white);
-  padding: 100px 24px;
-  overflow: hidden;
-}
-#study-guide-page .transformation-inner {
-  max-width: 1240px;
-  margin: 0 auto;
-}
-#study-guide-page .berry-head {
-  text-align: center;
-  max-width: 760px;
-  margin: 0 auto 64px;
-}
-#study-guide-page .berry-eyebrow {
-  display: inline-block;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 16px;
-}
-#study-guide-page .berry-title {
-  font-size: clamp(2rem, 4.5vw, 3.2rem);
-  font-weight: 900;
-  line-height: 1.1;
-  color: #FFFFFF;
-  margin-bottom: 20px;
-}
-#study-guide-page .berry-desc {
-  font-size: clamp(1.05rem, 2vw, 1.25rem);
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.6;
-}
-
-/* Kinetic Stream Architecture: Left -> Center Conduit -> Right */
-#study-guide-page .kinetic-pipeline-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 36px;
-  align-items: center;
-}
-@media (min-width: 992px) {
-  #study-guide-page .kinetic-pipeline-grid {
-    grid-template-columns: 1fr 140px 1fr;
-    gap: 20px;
-  }
-}
-
-#study-guide-page .pipeline-column {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-#study-guide-page .pipeline-col-title {
-  font-size: 0.85rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.75);
-  margin-bottom: 6px;
-}
-
-/* Material Chips */
-#study-guide-page .raw-chip-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 14px 18px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
-  color: #fff;
-  font-size: 0.92rem;
-  font-weight: 600;
-}
-#study-guide-page .raw-chip-icon {
-  width: 28px;
-  height: 28px;
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Center Animated Conduit */
-#study-guide-page .kinetic-conduit-hub {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 0;
-}
-#study-guide-page .conduit-stream-line {
-  position: relative;
-  width: 100%;
-  height: 4px;
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 2px;
-  overflow: hidden;
-}
-#study-guide-page .conduit-stream-line::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -50%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, #FFFFFF, transparent);
-  animation: streamFlow 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-@keyframes streamFlow {
-  0% { left: -50%; }
-  100% { left: 100%; }
-}
-
-#study-guide-page .conduit-badge {
-  margin-top: 12px;
-  padding: 4px 12px;
-  border-radius: 4px;
-  background: rgba(0, 0, 0, 0.25);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-/* Structured Output Chips */
-#study-guide-page .struct-chip-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 14px 18px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.95);
-  color: var(--ink);
-  font-size: 0.92rem;
-  font-weight: 700;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s ease;
-}
-#study-guide-page .struct-chip-item:hover {
-  transform: translateX(4px);
-}
-#study-guide-page .struct-chip-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--berry);
 }
 
 /* ====================================================================
@@ -3677,7 +3365,7 @@ header.elementor-55.elementor-location-header {
         </h1>
 
         <p class="hero-lead-text" id="heroLead">
-          Study Guide builds a dated study plan from your own class material, and it lets a tutor or teacher define a course, assign it to students, and follow each student's progress.
+          Study Guide builds a dated study plan from your class material, and it lets tutors and teachers define a course, assign it, and follow each student’s progress.
         </p>
 
         <div class="hero-actions-cluster" id="heroActions">
@@ -3745,33 +3433,28 @@ header.elementor-55.elementor-location-header {
   </section>
 
   <!-- ================================================================
-       ACT 2: AUDIENCE CARDS, DIRECTLY UNDER THE HERO (APPROVED TABLE 3)
+       ACT 2: WHO STUDY GUIDE IS FOR (MOVED DIRECTLY BELOW HERO)
        ================================================================ -->
-  <section class="act-gateway" aria-label="Select your path">
-    <div class="gateway-split">
-      <div class="gateway-portal" onclick="window.location.hash='students'">
-        <h2 class="portal-heading">For students</h2>
-        <p class="portal-summary">Build a dated study plan from your own notes, chapters, and lecture recordings.</p>
-        <a href="#students" class="portal-cta">
-          <span>See how the plan works</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
+  <section class="act-audience-fit" id="audienceFit">
+    <div class="audience-fit-inner">
+      <div class="fit-header">
+        <h2 class="fit-title">Who Study Guide is for</h2>
       </div>
-
-      <div class="gateway-portal" onclick="window.location.hash='tutors'">
-        <h2 class="portal-heading">For tutors and teachers</h2>
-        <p class="portal-summary">Define a course once, assign it to your students, and follow each student's progress.</p>
-        <a href="#tutors" class="portal-cta">
-          <span>See how courses work</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
+      <div class="fit-grid">
+        <div class="fit-card">
+          <h3 class="fit-card-title">Students</h3>
+          <p class="fit-card-desc">Study Guide is for students who attend classes or hold books and notes and want them organized into a schedule they can follow alone.</p>
+        </div>
+        <div class="fit-card">
+          <h3 class="fit-card-title">Tutors and teachers</h3>
+          <p class="fit-card-desc">This page is for independent tutors, coaching class teachers and school teachers who prepare their own material and want to see each student’s progress without collecting it by hand.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ================================================================
-       ACT 3: FOR STUDENTS: TURN YOUR OWN CLASS MATERIAL INTO A STUDY PLAN
-       Approved Section & Table 4 Steps
+       ACT 3: FOR STUDENTS: HOW IT WORKS (THE THREE-STEP STUDY-PLAN PROCESS)
        ================================================================ -->
   <section class="act-student-stage" id="students">
     <div class="student-stage-inner">
@@ -3780,7 +3463,7 @@ header.elementor-55.elementor-location-header {
         <p class="stage-desc">How it works</p>
       </div>
 
-      <!-- 3 Approved Steps (Table 4) -->
+      <!-- 3 Approved Steps -->
       <div class="continuous-pipeline-wrap">
         <!-- STEP 01 -->
         <div class="pipeline-step-node">
@@ -3806,15 +3489,14 @@ header.elementor-55.elementor-location-header {
             <span class="node-num-badge">03</span>
           </div>
           <h3 class="node-title">Create your study plan</h3>
-          <p class="node-text">Pick the class and the week, and a lesson, an interactive podcast, and a schedule of study sessions are built for you. Every plan stays available, so you can return to a lesson again before the next test.</p>
+          <p class="node-text">Pick the class and the week, and a lesson, an interactive podcast and a schedule of study sessions are built for you. Every plan stays available, so you can return to a lesson before the next test.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ================================================================
-       ACT 4: STUDENT H3 BLOCKS: CHAPTER DECONSTRUCT & MULTIMODAL ECOSYSTEM
-       Approved H3 Block: "What one chapter becomes"
+       ACT 4: WHAT ONE CHAPTER BECOMES (WITH INTERACTIVE CHAPTER PODCAST)
        ================================================================ -->
   <section class="act-chapter-deconstruct" id="chapterDeconstruct">
     <div class="deconstruct-inner">
@@ -3826,7 +3508,7 @@ header.elementor-55.elementor-location-header {
         <div class="multimodal-sandbox">
           <div class="multimodal-box">
             <h3 class="mm-box-title">What one chapter becomes</h3>
-            <p class="mm-box-text">A lesson is written from your own file first, and the key terms are defined where they appear. The interactive podcast reads that lesson aloud, asks a question, and then gives the answer, which lets you check your recall on a commute or on a short walk.</p>
+            <p class="mm-box-text">A lesson is written from your own file first, with key terms defined where they appear. The interactive podcast reads that lesson aloud, asks a question and gives the answer, so you can check recall on a commute or a short walk.</p>
           </div>
 
           <div class="multimodal-box">
@@ -3850,7 +3532,7 @@ header.elementor-55.elementor-location-header {
   </section>
 
   <!-- ================================================================
-       ACT 5: STUDENT H3 BLOCKS: SESSIONS THAT DEEPEN, TEACHER EMPHASIS, BUILT FROM WHAT YOU BRING
+       ACT 5: SESSIONS THAT DEEPEN
        ================================================================ -->
   <section class="act-depth-calibration" id="depthSection">
     <div class="depth-inner">
@@ -3858,7 +3540,7 @@ header.elementor-55.elementor-location-header {
         <!-- Approved H3 Block: Sessions that deepen -->
         <div class="depth-card">
           <h3 class="depth-h3">Sessions that deepen</h3>
-          <p class="depth-desc">Study sessions are arranged at three levels: normal, deep thinking, and deeper thinking. Each level has a follow-up session for the topics you missed, and the whole schedule can also be viewed as a list, a calendar, or a combined calendar across your classes.</p>
+          <p class="depth-desc">Study sessions are arranged at three levels: normal, deep thinking, and deeper thinking. Each level has a follow-up session for missed topics, and the schedule can be viewed as a list, a calendar, or a combined calendar across your classes.</p>
           
           <div class="branch-nodes-wrap">
             <div class="branch-node">
@@ -3876,7 +3558,7 @@ header.elementor-55.elementor-location-header {
           </div>
         </div>
 
-        <!-- Approved H3 Block: Your teacher's emphasis, on the record -->
+        <!-- Teacher Calibration Equalizer -->
         <div class="depth-card">
           <h3 class="depth-h3">Your teacher's emphasis, on the record</h3>
           <p class="depth-desc">The plan is shaped by two optional questions, whether the teacher stressed anything and whether anything failed to make sense, and Study Guide slows down on the second, so the plan reflects your lecture and your gaps instead of a standard outline for the whole class.</p>
@@ -3904,7 +3586,7 @@ header.elementor-55.elementor-location-header {
           </div>
         </div>
 
-        <!-- Approved H3 Block: Built from what you bring -->
+        <!-- Built from what you bring -->
         <div class="depth-card full-width-card">
           <h3 class="depth-h3">Built from what you bring</h3>
           <p class="depth-desc">Study Guide works from the material you add, so a single product can serve a school subject, an entrance exam, or a professional qualification, depending on the files you add. The plan is anchored to your syllabus and your sources because they are the only inputs that the product uses.</p>
@@ -3915,7 +3597,6 @@ header.elementor-55.elementor-location-header {
 
   <!-- ================================================================
        ACT 6: FOR TUTORS AND TEACHERS: DEFINE A COURSE, ASSIGN IT, AND FOLLOW EVERY STUDENT
-       Approved Section, Table 5 Steps & Table 6 Buttons
        ================================================================ -->
   <section class="act-cerulean-tutors" id="tutors">
     <div class="tutors-inner">
@@ -3962,7 +3643,7 @@ header.elementor-55.elementor-location-header {
                 <div class="material-items-list">
                   <div class="material-chip">
                     <span class="chip-icon">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
                     </span>
                     <span class="chip-name">Notes: Chapter_03_Kinematics.pdf</span>
                   </div>
@@ -4125,7 +3806,7 @@ header.elementor-55.elementor-location-header {
 
         </div>
 
-        <!-- 3 Approved Steps (Table 5) -->
+        <!-- 3 Approved Steps (Trimmed Copy) -->
         <div class="tutor-steps-selector">
           
           <!-- Step 01 -->
@@ -4134,7 +3815,7 @@ header.elementor-55.elementor-location-header {
               <span class="step-number-tag">Step 01</span>
             </div>
             <h3 class="step-item-title">Define your course</h3>
-            <p class="step-item-desc">Name the course, set its length and grade level, and add the notes, slides, files, or lecture recordings that you already teach from.</p>
+            <p class="step-item-desc">Name the course, set its length and grade level, and add the notes, slides, files, or lecture recordings you already teach from.</p>
           </div>
 
           <!-- Step 02 -->
@@ -4143,7 +3824,7 @@ header.elementor-55.elementor-location-header {
               <span class="step-number-tag">Step 02</span>
             </div>
             <h3 class="step-item-title">Assign it to your students</h3>
-            <p class="step-item-desc">Choose the students who should take the course, and it is delivered to each of them, so the whole group begins from one shared course.</p>
+            <p class="step-item-desc">Choose the students who take the course, and it is delivered to each of them, so the whole group begins from one shared course.</p>
           </div>
 
           <!-- Step 03 -->
@@ -4152,33 +3833,33 @@ header.elementor-55.elementor-location-header {
               <span class="step-number-tag">Step 03</span>
             </div>
             <h3 class="step-item-title">Follow each student's progress</h3>
-            <p class="step-item-desc">Open each student's progress whenever you need it, and see how every student is doing without waiting for the next test to tell you.</p>
+            <p class="step-item-desc">Open each student’s progress whenever you need it and see how every student is doing without waiting for the next test.</p>
           </div>
 
         </div>
       </div>
 
-      <!-- Approved Tutor H3 Pillars (from Word Doc) -->
+      <!-- Approved Tutor H3 Pillars (Trimmed Copy) -->
       <div class="tutor-pillars-grid">
         <div class="tutor-pillar-card">
           <h3 class="pillar-title">One course, many paces</h3>
-          <p class="pillar-desc">Each student works through the course at a pace that suits them, so a quick learner is not held back and a slower one is not hurried past a topic that needs time. Questions adapt to the answers a student gives, which keeps practice close to what that student still has to learn.</p>
+          <p class="pillar-desc">Each student works through the course at a suitable pace, so a quick learner is not held back and a slower one is not hurried past a topic that needs time. Questions adapt to a student’s answers, which keeps practice close to what that student still has to learn.</p>
         </div>
         <div class="tutor-pillar-card">
           <h3 class="pillar-title">Progress you can read</h3>
-          <p class="pillar-desc">Progress is shown student by student, and the next session with a student can begin from the topic that needs attention instead of a general review.</p>
+          <p class="pillar-desc">Progress is shown student by student, and the next session can begin from the topic that needs attention instead of a general review.</p>
         </div>
         <div class="tutor-pillar-card">
           <h3 class="pillar-title">Your material, your course</h3>
-          <p class="pillar-desc">The course is built from the files and recordings you teach from, so it follows your syllabus and carries your emphasis, and nothing has to be rewritten into a new format before your students can use it.</p>
+          <p class="pillar-desc">The course is built from the files and recordings you teach from, so it follows your syllabus and carries your emphasis, and nothing has to be rewritten before students can use it.</p>
         </div>
         <div class="tutor-pillar-card">
           <h3 class="pillar-title">For one tutor or a whole center</h3>
-          <p class="pillar-desc">An independent tutor with a handful of students and a coaching class with several batches can use the same tools, since a course is defined once and assigned whenever it is needed.</p>
+          <p class="pillar-desc">An independent tutor with a handful of students and a coaching class with several batches can use the same tools, since a course is defined once and assigned when needed.</p>
         </div>
       </div>
 
-      <!-- Table 6: Tutor Call to Action Block -->
+      <!-- Mid-Page Tutor Call to Action Block (UNCHANGED) -->
       <div class="tutor-consult-card">
         <h3 class="tutor-consult-title">Ready to run your courses on Study Guide?</h3>
         <p class="tutor-consult-desc">We will help you set up your first course and onboard your students.</p>
@@ -4195,29 +3876,7 @@ header.elementor-55.elementor-location-header {
   </section>
 
   <!-- ================================================================
-       ACT 7: WHO STUDY GUIDE IS FOR (APPROVED SECTION FROM WORD DOC)
-       ================================================================ -->
-  <section class="act-audience-fit" id="audienceFit">
-    <div class="audience-fit-inner">
-      <div class="fit-header">
-        <h2 class="fit-title">Who Study Guide is for</h2>
-      </div>
-      <div class="fit-grid">
-        <div class="fit-card">
-          <h3 class="fit-card-title">Students</h3>
-          <p class="fit-card-desc">Study Guide is written for students who already attend classes or hold books and notes, and who want those materials organized into a schedule they can follow alone.</p>
-        </div>
-        <div class="fit-card">
-          <h3 class="fit-card-title">Tutors and teachers</h3>
-          <p class="fit-card-desc">This page is written for independent tutors, coaching class teachers, and school teachers who prepare their own material and want to know how each student is progressing without collecting that information by hand.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================================================================
-       ACT 8: FREQUENTLY ASKED QUESTIONS (APPROVED SECTION - 13 QUESTIONS)
-       Exact text from Word Document
+       ACT 7: FREQUENTLY ASKED QUESTIONS (5 APPROVED QUESTIONS)
        ================================================================ -->
   <section class="act-audience-faq" id="faq">
     <div class="faq-inner">
@@ -4229,94 +3888,6 @@ header.elementor-55.elementor-location-header {
         <!-- 1 -->
         <div class="faq-item" data-faq-item>
           <button type="button" class="faq-trigger" aria-expanded="false">
-            <span>What is Study Guide?</span>
-            <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></span>
-          </button>
-          <div class="faq-answer-collapse">
-            <div class="faq-answer-body">A lesson, an interactive podcast, and a schedule of study sessions are built by Study Guide from the class material you upload. It works for any subject and level, because the content comes from your files.</div>
-          </div>
-        </div>
-
-        <!-- 2 -->
-        <div class="faq-item" data-faq-item>
-          <button type="button" class="faq-trigger" aria-expanded="false">
-            <span>Is Study Guide free to try?</span>
-            <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></span>
-          </button>
-          <div class="faq-answer-collapse">
-            <div class="faq-answer-body">Yes. The first two weeks are free for every new sign-up made through the form on this page.</div>
-          </div>
-        </div>
-
-        <!-- 3 -->
-        <div class="faq-item" data-faq-item>
-          <button type="button" class="faq-trigger" aria-expanded="false">
-            <span>Which files can I add?</span>
-            <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></span>
-          </button>
-          <div class="faq-answer-collapse">
-            <div class="faq-answer-body">PDF, Word, PowerPoint, and text files are accepted, along with audio and video recordings. Every file is processed automatically after upload.</div>
-          </div>
-        </div>
-
-        <!-- 4 -->
-        <div class="faq-item" data-faq-item>
-          <button type="button" class="faq-trigger" aria-expanded="false">
-            <span>What do I need before I start?</span>
-            <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></span>
-          </button>
-          <div class="faq-answer-collapse">
-            <div class="faq-answer-body">A class name, the number of weeks, and at least one upcoming test date are required. The plan is built around your test dates, and past dates cannot be selected.</div>
-          </div>
-        </div>
-
-        <!-- 5 -->
-        <div class="faq-item" data-faq-item>
-          <button type="button" class="faq-trigger" aria-expanded="false">
-            <span>How long does a plan take to build?</span>
-            <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></span>
-          </button>
-          <div class="faq-answer-collapse">
-            <div class="faq-answer-body">The app shows an estimate of three to fifteen minutes, depending on how much content you have added so far. The finished plan is listed under Course Plans.</div>
-          </div>
-        </div>
-
-        <!-- 6 -->
-        <div class="faq-item" data-faq-item>
-          <button type="button" class="faq-trigger" aria-expanded="false">
-            <span>Does Study Guide include JEE or NEET material?</span>
-            <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></span>
-          </button>
-          <div class="faq-answer-collapse">
-            <div class="faq-answer-body">Prepared exam content is not included. You add the chapters that you will be studying, and the plan is built from them.</div>
-          </div>
-        </div>
-
-        <!-- 7 -->
-        <div class="faq-item" data-faq-item>
-          <button type="button" class="faq-trigger" aria-expanded="false">
-            <span>Can I use it for more than one class?</span>
-            <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></span>
-          </button>
-          <div class="faq-answer-collapse">
-            <div class="faq-answer-body">Yes. Each class is set up once under My Classes, and the plans for all of them can be viewed together in the combined calendar.</div>
-          </div>
-        </div>
-
-        <!-- 8 -->
-        <div class="faq-item" data-faq-item>
-          <button type="button" class="faq-trigger" aria-expanded="false">
-            <span>Can my tutor or teacher assign a course to me?</span>
-            <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></span>
-          </button>
-          <div class="faq-answer-collapse">
-            <div class="faq-answer-body">Yes, a course assigned by your tutor is studied at your own pace with questions that adapt to your answers, and the tutor is able to check how you are progressing.</div>
-          </div>
-        </div>
-
-        <!-- 9 -->
-        <div class="faq-item" data-faq-item>
-          <button type="button" class="faq-trigger" aria-expanded="false">
             <span>What is Study Guide for tutors?</span>
             <span class="faq-chevron"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></span>
           </button>
@@ -4325,7 +3896,7 @@ header.elementor-55.elementor-location-header {
           </div>
         </div>
 
-        <!-- 10 -->
+        <!-- 2 -->
         <div class="faq-item" data-faq-item>
           <button type="button" class="faq-trigger" aria-expanded="false">
             <span>Can each student study at their own pace?</span>
@@ -4336,7 +3907,7 @@ header.elementor-55.elementor-location-header {
           </div>
         </div>
 
-        <!-- 11 -->
+        <!-- 3 -->
         <div class="faq-item" data-faq-item>
           <button type="button" class="faq-trigger" aria-expanded="false">
             <span>What can I see about each student?</span>
@@ -4347,7 +3918,7 @@ header.elementor-55.elementor-location-header {
           </div>
         </div>
 
-        <!-- 12 -->
+        <!-- 4 -->
         <div class="faq-item" data-faq-item>
           <button type="button" class="faq-trigger" aria-expanded="false">
             <span>Do I need to prepare new material?</span>
@@ -4358,7 +3929,7 @@ header.elementor-55.elementor-location-header {
           </div>
         </div>
 
-        <!-- 13 -->
+        <!-- 5 -->
         <div class="faq-item" data-faq-item>
           <button type="button" class="faq-trigger" aria-expanded="false">
             <span>Can I use one course with different groups of students?</span>
@@ -4373,14 +3944,13 @@ header.elementor-55.elementor-location-header {
   </section>
 
   <!-- ================================================================
-       ACT 9: START YOUR FIRST TWO WEEKS FREE (APPROVED SIGN-UP FORM)
-       Exact text from Word Document (Table 7 & 8)
+       ACT 8: FINAL REGISTRATION SECTION: START YOUR FIRST TWO WEEKS FREE
        ================================================================ -->
   <section class="act-registration-finale" id="start">
     <div class="finale-inner">
       <div class="finale-header">
         <h2 class="finale-title">Start your first two weeks free</h2>
-        <p class="finale-desc">Create your account, add one chapter, and let Study Guide build your first plan, with the first two weeks free.</p>
+        <p class="finale-desc">Create your account, add one chapter, and let Study Guide build your first plan.</p>
       </div>
 
       <div class="registration-card">
@@ -4393,7 +3963,7 @@ header.elementor-55.elementor-location-header {
             <input type="text" name="company_website" id="honeypotField" tabindex="-1" autocomplete="off">
           </div>
 
-          <!-- Role Selection (Table 7: Student, Tutor or teacher) -->
+          <!-- Role Selection (Table 10: I am a (Required): Student) -->
           <div class="form-field-group">
             <label class="form-field-label" for="roleSelect">
               <span>I am a</span>
@@ -4435,7 +4005,7 @@ header.elementor-55.elementor-location-header {
             <div class="field-error-msg" id="phoneErrorMsg">Enter a valid mobile number.</div>
           </div>
 
-          <!-- I am preparing for (Table 7: Drop-down, shown only when Student) -->
+          <!-- I am preparing for (Optional) -->
           <div class="form-field-group" id="prepGoalFieldGroup">
             <label class="form-field-label" for="prepGoalInput">
               <span>I am preparing for</span>
@@ -4452,7 +4022,7 @@ header.elementor-55.elementor-location-header {
             </select>
           </div>
 
-          <!-- Consent Stack (Table 7) -->
+          <!-- Consent Stack (Table 10) -->
           <div class="consent-stack">
             <label class="consent-item">
               <input type="checkbox" id="termsCheck" name="terms_consent" required>
@@ -4464,17 +4034,19 @@ header.elementor-55.elementor-location-header {
             </label>
           </div>
 
-          <!-- Button & Note (Table 8) -->
+          <!-- Submit Button & Microcopy (Table 10) -->
           <button type="submit" class="btn-form-submit" id="btnSubmitForm">
             Start My Free Two Weeks
           </button>
-          <p class="form-note-under" style="text-align:center; font-size:0.82rem; color:var(--ink-muted); margin-top:14px; margin-bottom:0;">Your details are used to set up your account and to contact you about Study Guide.</p>
+          <p class="form-note-under" style="text-align:center; font-size:0.82rem; color:var(--ink-muted); margin-top:14px; margin-bottom:0;">Your details set up your account and let us contact you about Study Guide.</p>
         </form>
       </div>
     </div>
   </section>
 
 </main>
+
+
 
 
 
