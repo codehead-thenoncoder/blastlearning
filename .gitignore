@@ -2,3 +2,5 @@ scratch/
 *.bak*
 .DS_Store
 Thumbs.db
+~$*
+backup_approved/

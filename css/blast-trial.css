@@ -1,0 +1,588 @@
+/* ==========================================================================
+   BLAST LEARNING — TRIAL REGISTRATION & FORM STYLES
+   Used both in Section 13 (landing page) and /trial (standalone page)
+   ========================================================================== */
+
+.trial-section {
+  padding-top: 4.5rem;
+  padding-bottom: 6rem;
+  background-color: var(--bg-page);
+}
+
+.trial-section--standalone {
+  min-height: 100vh;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+/* Standalone Header (Minimal) */
+.standalone-header {
+  border-bottom: 1px solid var(--border-light);
+  padding: 1.25rem 0;
+  margin-bottom: 3.5rem;
+  background-color: var(--bg-page);
+}
+
+.standalone-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.standalone-header__login-link {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.standalone-header__login-link a {
+  color: var(--color-blue-primary);
+  font-weight: 600;
+  margin-left: 0.25rem;
+}
+
+.standalone-header__login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Trial Section Header */
+.trial-header {
+  max-width: 44rem;
+  margin-bottom: 3rem;
+}
+
+.trial-header__desc {
+  font-size: 1.05rem;
+  color: var(--text-body);
+  line-height: 1.6;
+  margin-top: 0.85rem;
+}
+
+/* Two-column layout */
+.trial-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* --------------------------------------------------------------------------
+   THE 3-STEP FORM CONTAINER
+   -------------------------------------------------------------------------- */
+.trial-form-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 2.75rem 2.5rem;
+  box-shadow: var(--shadow-card);
+}
+
+.form-step {
+  margin-bottom: 2.75rem;
+  position: relative;
+}
+
+.form-step:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.form-step__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.form-step__badge-title {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.form-step__number {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--color-blue-primary);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.form-step__number--completed {
+  background-color: var(--accent-green-dark);
+}
+
+.form-step__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: -0.015em;
+}
+
+/* Form Groups & Controls */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-row--3 {
+  grid-template-columns: 1.2fr 0.9fr 1fr;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.form-label {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.45rem;
+}
+
+.form-label__opt {
+  font-weight: 400;
+  text-transform: lowercase;
+  color: var(--text-subtle);
+}
+
+.input-control,
+.select-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.9375rem;
+  color: var(--text-dark);
+  background-color: #fbfbfb;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+.input-control:hover,
+.select-control:hover {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+}
+
+.input-control:focus,
+.select-control:focus {
+  background-color: #ffffff;
+  border-color: var(--color-blue-primary);
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.12);
+}
+
+.input-control::placeholder {
+  color: #9ca3af;
+}
+
+/* Phone input with fixed +91 prefix */
+.phone-input-wrap {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.phone-prefix {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 0.85rem;
+  background-color: #f1f5f9;
+  border: 1px solid var(--border-light);
+  border-right: none;
+  border-top-left-radius: var(--radius-sm);
+  border-bottom-left-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.phone-input-wrap .input-control {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Segmented Board Selector */
+.board-selector {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.board-pill {
+  padding: 0.65rem 0.5rem;
+  text-align: center;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-body);
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.board-pill:hover {
+  border-color: #cbd5e1;
+}
+
+.board-pill.is-active {
+  background-color: #ffffff;
+  border: 2px solid var(--color-blue-primary);
+  color: var(--color-blue-primary);
+  font-weight: 700;
+}
+
+/* Consent Checkbox */
+.consent-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.consent-checkbox {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--color-blue-primary);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.consent-label {
+  font-size: 0.8125rem;
+  color: var(--text-body);
+  line-height: 1.5;
+}
+
+.consent-label a {
+  color: var(--color-blue-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   STEP 3: PAYMENT ON FILE & RAZORPAY INTEGRATION LAYER
+   -------------------------------------------------------------------------- */
+.payment-encryption-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.payment-notice-box {
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: #1e40af;
+}
+
+.payment-notice-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Card Number input with detected brand */
+.card-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.card-brand-icon {
+  position: absolute;
+  right: 12px;
+  width: 32px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* Plan Selection Cards */
+.plan-picker {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.plan-option {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.15rem 1.25rem;
+  background-color: #fbfbfb;
+  cursor: pointer;
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.plan-option:hover {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+}
+
+.plan-option.is-selected {
+  background-color: #ffffff;
+  border: 2px solid var(--color-blue-primary);
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.08);
+}
+
+.plan-option__badge {
+  position: absolute;
+  top: -10px;
+  right: 12px;
+}
+
+.plan-option__name {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.25rem;
+}
+
+.plan-option__price {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.plan-option.is-selected .plan-option__price {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.trial-submit-btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.trial-guarantee-note {
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   RIGHT COLUMN SIDEBAR CARDS
+   -------------------------------------------------------------------------- */
+.trial-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Sidebar Card: What Happens Next */
+.side-card--next {
+  background-color: var(--bg-dark-card);
+  color: var(--text-white);
+  border-radius: var(--radius-xl);
+  padding: 2.25rem 2rem;
+  box-shadow: var(--shadow-dark);
+}
+
+.side-card--next .side-card__title {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+}
+
+.next-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.next-step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--text-light-body);
+}
+
+.next-step-item__num {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #232832;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Sidebar Card: 30-Day Money-back guarantee (Page 6) */
+.side-card--guarantee {
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  box-shadow: var(--shadow-card);
+}
+
+.side-card--guarantee .guarantee-check-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--accent-green-light);
+  color: var(--accent-green-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.side-card--guarantee .guarantee-title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.25rem;
+}
+
+.side-card--guarantee .guarantee-desc {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--text-body);
+}
+
+/* Sidebar Card: Your Data */
+.side-card--data {
+  background-color: var(--bg-warm-card);
+  border: 1px solid #ebd9b8;
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+}
+
+.side-card--data .data-title {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #92400e;
+  margin-bottom: 0.5rem;
+}
+
+.side-card--data .data-desc {
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: #78350f;
+}
+
+/* Sidebar Card: Prefer to talk first */
+.side-card--talk {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-card);
+}
+
+.side-card--talk .talk-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.35rem;
+}
+
+.side-card--talk .talk-desc {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--text-body);
+  margin-bottom: 0.75rem;
+}
+
+.side-card--talk .talk-phone {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-blue-primary);
+  display: inline-block;
+  transition: color var(--transition-fast);
+}
+
+.side-card--talk .talk-phone:hover {
+  color: var(--color-blue-hover);
+  text-decoration: underline;
+}
+
+/* Minimal Standalone Footer */
+.standalone-footer {
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--border-light);
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.standalone-footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.standalone-footer__links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .trial-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .trial-form-card {
+    padding: 2rem 1.25rem;
+  }
+  .form-row,
+  .form-row--3,
+  .plan-picker {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

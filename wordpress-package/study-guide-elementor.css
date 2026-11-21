@@ -1,0 +1,2166 @@
+/* ====================================================================
+   BLAST LEARNING — STUDY GUIDE
+   MASTER SCOPED STYLESHEET (ELEMENTOR COMPATIBLE)
+   Strictly scoped under #study-guide-page to prevent WordPress/theme leaks.
+   ==================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
+
+/* --- RESET & BOX SIZING --- */
+#study-guide-page, #study-guide-page *, #study-guide-page *::before, #study-guide-page *::after {
+  box-sizing: border-box;
+}
+
+:root, #study-guide-page {
+  /* Live Site Elementor Kit Tokens */
+  --e-global-color-primary: #D1007F;
+  --e-global-color-secondary: #008CD3;
+  --e-global-color-text: #1A1A1A;
+  --e-global-color-accent: #ED1E79;
+  --e-global-color-83e0f8b: #ED6CA7;
+  --e-global-color-1de6bd2: #46BFEF;
+  --e-global-color-1cd97e6: #FFFFFF;
+  --e-global-color-a33a292: #F5F5F5;
+  --e-global-typography-primary-font-family: "Poppins";
+  --e-global-typography-primary-font-size: 16px;
+  --e-global-typography-primary-font-weight: 400;
+  --e-global-typography-secondary-font-family: "Poppins";
+  --e-global-typography-secondary-font-size: 16px;
+  --e-global-typography-secondary-font-weight: 500;
+  --e-global-typography-text-font-family: "Poppins";
+  --e-global-typography-text-font-size: 18px;
+  --e-global-typography-text-font-weight: 400;
+  --e-global-typography-accent-font-family: "Poppins";
+  --e-global-typography-accent-font-size: 18px;
+  --e-global-typography-accent-font-weight: 600;
+  --kit-widget-spacing: 20px;
+
+  /* Approved Study Guide Brand Palette */
+  --berry: #A8005A;
+  --berry-deep: #5A0030;
+  --berry-dark: #38001E;
+  --berry-tint: rgba(168, 0, 90, 0.08);
+  --berry-glow: rgba(168, 0, 90, 0.25);
+  
+  --cerulean: #0960A0;
+  --cerulean-deep: #063F69;
+  --cerulean-dark: #04243D;
+  --cerulean-tint: rgba(9, 96, 160, 0.08);
+  --cerulean-glow: rgba(9, 96, 160, 0.25);
+
+  --wild-rose: #CB4C7A;
+  --blue: #3A8EC0;
+  
+  --cream: #FAF6F1;
+  --cream-alt: #F4EFEA;
+  --stone: #F0EDE8;
+  --stone-deep: #E5E1DA;
+
+  /* Ink Hierarchy */
+  --ink: #11141A;
+  --ink-secondary: #424754;
+  --ink-muted: #727988;
+  --ink-faint: #A4ACB9;
+  --white: #FFFFFF;
+
+  /* Surface Layers */
+  --surface-card: #FFFFFF;
+  --surface-elevated: rgba(255, 255, 255, 0.94);
+  --surface-glass: rgba(255, 255, 255, 0.72);
+  --border-subtle: rgba(17, 20, 26, 0.08);
+  --border-medium: rgba(17, 20, 26, 0.14);
+
+  /* Physics Curves & Timings */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 0.25s;
+  --dur-med: 0.5s;
+  --dur-slow: 0.85s;
+
+  /* Typography Scales */
+  --font-display: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: 'Newsreader', Georgia, serif;
+  --font-site: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+
+/* ====================================================================
+   APPROVED STUDY GUIDE BODY STYLES (SCOPED UNDER #study-guide-page)
+   ==================================================================== */
+/* ====================================================================
+   STUDY GUIDE MODULE BASE ROOT (ISOLATED WRAPPER)
+   ==================================================================== */
+#study-guide-page {
+  font-family: var(--font-display);
+  background: var(--cream);
+  color: var(--ink);
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+  line-height: 1.5;
+}
+/* ====================================================================
+   THE LIVING LEARNING CONTINUUM (PAGE-WIDE CONNECTING SPINE)
+   ==================================================================== */
+#study-guide-page .living-spine {
+  position: fixed;
+  left: 28px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, 
+    rgba(168, 0, 90, 0) 0%,
+    rgba(168, 0, 90, 0.4) 15%,
+    rgba(9, 96, 160, 0.5) 50%,
+    rgba(168, 0, 90, 0.4) 85%,
+    rgba(168, 0, 90, 0) 100%
+  );
+  z-index: 99;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  #study-guide-page .living-spine { display: none; }
+}
+
+/* ====================================================================
+   ACT 1: THE HERO CAMPAIGN CANVAS
+   Art-directed hero with 100% visible, unobstructed campaign image
+   ==================================================================== */
+#study-guide-page .hero-campaign {
+  position: relative;
+  min-height: calc(100vh - 125px);
+  padding: 40px 24px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--cream);
+  overflow: hidden;
+}
+
+#study-guide-page .hero-grid {
+  position: relative;
+  z-index: 2;
+  max-width: 1360px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  #study-guide-page .hero-grid {
+    grid-template-columns: 1.05fr 1.15fr;
+    gap: 56px;
+  }
+}
+
+#study-guide-page .hero-copy-column {
+  max-width: 660px;
+}
+
+#study-guide-page .hero-display-h1 {
+  font-size: clamp(2.1rem, 4.6vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+  margin-bottom: 20px;
+}
+#study-guide-page .h1-clip-line {
+  display: block;
+  overflow: hidden;
+}
+#study-guide-page .h1-text-reveal {
+  display: block;
+  transform: translateY(0);
+}
+
+#study-guide-page .hero-lead-text {
+  font-size: clamp(1rem, 1.8vw, 1.18rem);
+  font-weight: 400;
+  color: var(--ink-secondary);
+  line-height: 1.58;
+  max-width: 560px;
+  margin-bottom: 28px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#study-guide-page .hero-actions-cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#study-guide-page .btn-primary-glow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 36px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--berry);
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 8px 28px var(--berry-glow);
+  transition: background var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
+}
+#study-guide-page .btn-primary-glow:hover {
+  background: #8E004B;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px var(--berry-glow);
+}
+#study-guide-page .btn-primary-glow svg {
+  transition: transform 0.25s ease;
+}
+#study-guide-page .btn-primary-glow:hover svg {
+  transform: translateX(4px);
+}
+#study-guide-page .btn-primary-glow:active { transform: scale(0.98); }
+
+#study-guide-page .btn-editorial-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 28px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid var(--border-medium);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: all var(--dur-fast) ease;
+}
+#study-guide-page .btn-editorial-ghost:hover {
+  border-color: var(--berry);
+  color: var(--berry);
+  background: var(--white);
+  transform: translateY(-1px);
+}
+
+/* ====================================================================
+   ACT 1: HERO CAMPAIGN CANVAS — AMBIENT WAVE MOTION SYSTEM
+   Continuous Right -> Left drift with gentle sinusoidal wave paths.
+   Protected content zone: strictly avoids H1, lead paragraph, and CTA.
+   ==================================================================== */
+#study-guide-page .hero-material-backdrop {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#study-guide-page .material-piece {
+  position: absolute;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(17, 20, 26, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(17, 20, 26, 0.03);
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+  pointer-events: none;
+  will-change: transform, opacity;
+  white-space: nowrap;
+  user-select: none;
+}
+#study-guide-page .material-piece .mat-icon {
+  font-size: 0.9rem;
+  line-height: 1;
+  opacity: 0.85;
+}
+#study-guide-page .material-piece .mat-label {
+  letter-spacing: -0.01em;
+}
+
+/* Lane 1: Upper Sky Lane (High above H1 and hero composition) */
+#study-guide-page .mat-lane-1 {
+  top: 28px;
+  animation: heroWaveFlow1 26s linear infinite;
+  animation-delay: -7s;
+  opacity: 0.16;
+}
+
+/* Lane 2: Upper Margin Lane (Skims above the text block) */
+#study-guide-page .mat-lane-2 {
+  top: 80px;
+  animation: heroWaveFlow2 32s linear infinite;
+  animation-delay: -18s;
+  opacity: 0.14;
+}
+
+/* Lane 3: Lower Apron Lane (Below the CTA and below the hero visual pedestal) */
+#study-guide-page .mat-lane-3 {
+  bottom: 58px;
+  animation: heroWaveFlow3 24s linear infinite;
+  animation-delay: -11s;
+  opacity: 0.16;
+}
+
+/* Lane 4: Deep Base Lane (Along the bottom transition seam) */
+#study-guide-page .mat-lane-4 {
+  bottom: 16px;
+  animation: heroWaveFlow4 36s linear infinite;
+  animation-delay: -26s;
+  opacity: 0.12;
+}
+
+/* --- Sinusoidal Wave Keyframes (Right -> Left Travel + Soft Up-Down-Up) --- */
+@keyframes heroWaveFlow1 {
+  0% {
+    transform: translate3d(102vw, 0px, 0) rotate(-3deg);
+    opacity: 0;
+  }
+  4% {
+    opacity: 0.16;
+  }
+  20% {
+    transform: translate3d(78vw, -8px, 0) rotate(-1.5deg);
+  }
+  38% {
+    transform: translate3d(54vw, 7px, 0) rotate(1deg);
+  }
+  56% {
+    transform: translate3d(30vw, -7px, 0) rotate(-1deg);
+  }
+  74% {
+    transform: translate3d(6vw, 8px, 0) rotate(2deg);
+    opacity: 0.16;
+  }
+  92% {
+    opacity: 0.12;
+  }
+  98% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(-330px, 0px, 0) rotate(-3deg);
+    opacity: 0;
+  }
+}
+
+@keyframes heroWaveFlow2 {
+  0% {
+    transform: translate3d(102vw, 0px, 0) rotate(4deg);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.14;
+  }
+  22% {
+    transform: translate3d(76vw, 9px, 0) rotate(2deg);
+  }
+  42% {
+    transform: translate3d(50vw, -8px, 0) rotate(-1deg);
+  }
+  64% {
+    transform: translate3d(24vw, 8px, 0) rotate(2.5deg);
+  }
+  82% {
+    transform: translate3d(-2vw, -6px, 0) rotate(0deg);
+    opacity: 0.14;
+  }
+  94% {
+    opacity: 0.08;
+  }
+  100% {
+    transform: translate3d(-330px, 0px, 0) rotate(3deg);
+    opacity: 0;
+  }
+}
+
+@keyframes heroWaveFlow3 {
+  0% {
+    transform: translate3d(102vw, 0px, 0) rotate(-5deg);
+    opacity: 0;
+  }
+  4% {
+    opacity: 0.16;
+  }
+  24% {
+    transform: translate3d(74vw, -7px, 0) rotate(-2deg);
+  }
+  46% {
+    transform: translate3d(48vw, 8px, 0) rotate(1deg);
+  }
+  68% {
+    transform: translate3d(22vw, -8px, 0) rotate(-1deg);
+  }
+  86% {
+    transform: translate3d(-4vw, 6px, 0) rotate(2deg);
+    opacity: 0.16;
+  }
+  96% {
+    opacity: 0.06;
+  }
+  100% {
+    transform: translate3d(-330px, 0px, 0) rotate(-4deg);
+    opacity: 0;
+  }
+}
+
+@keyframes heroWaveFlow4 {
+  0% {
+    transform: translate3d(102vw, 0px, 0) rotate(3deg);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.12;
+  }
+  25% {
+    transform: translate3d(75vw, 8px, 0) rotate(1deg);
+  }
+  50% {
+    transform: translate3d(46vw, -7px, 0) rotate(-2deg);
+  }
+  72% {
+    transform: translate3d(18vw, 8px, 0) rotate(2deg);
+  }
+  88% {
+    transform: translate3d(-6vw, -5px, 0) rotate(0deg);
+    opacity: 0.12;
+  }
+  97% {
+    opacity: 0.05;
+  }
+  100% {
+    transform: translate3d(-330px, 0px, 0) rotate(2deg);
+    opacity: 0;
+  }
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  #study-guide-page .mat-lane-1,
+  #study-guide-page .mat-lane-2,
+  #study-guide-page .mat-lane-3,
+  #study-guide-page .mat-lane-4 {
+    animation: none !important;
+    opacity: 0.12 !important;
+    transform: none !important;
+  }
+}
+
+/* Restored Floating Product State Badge (Layer 3B: Top-Right of Hero Frame) */
+#study-guide-page .hero-perimeter-badge {
+  position: absolute;
+  top: -16px;
+  right: 20px;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 10px 14px 10px 14px;
+  box-shadow: 0 12px 28px rgba(17, 20, 26, 0.08);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--ink);
+  pointer-events: none;
+  will-change: transform;
+}
+#study-guide-page .badge-pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #27AE60;
+  box-shadow: 0 0 8px #27AE60;
+  animation: pulseGreen 2.2s infinite;
+}
+@keyframes pulseGreen {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+/* ====================================================================
+   ACT 1: HERO CAMPAIGN CANVAS — ART-DIRECTED EDITORIAL COMPOSITION
+   ==================================================================== */
+#study-guide-page .hero-stage-column {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#study-guide-page .hero-composition-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+  perspective: 1200px;
+}
+
+/* Depth Layer 1: Archival Document Underlay (Syllabus manuscript backing) */
+#study-guide-page .hero-layer-underlay {
+  position: absolute;
+  inset: -14px -14px -18px -14px;
+  background: #fbf9f4;
+  border: 1px solid rgba(17, 20, 26, 0.1);
+  border-radius: 32px 12px 42px 14px;
+  transform: rotate(-3deg);
+  box-shadow: 0 16px 40px rgba(17, 20, 26, 0.06);
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+  will-change: transform;
+}
+#study-guide-page .underlay-grid-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(17, 20, 26, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 20, 26, 0.04) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.7;
+}
+#study-guide-page .underlay-meta-strip {
+  position: absolute;
+  bottom: 12px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: rgba(17, 20, 26, 0.45);
+  text-transform: uppercase;
+}
+#study-guide-page .underlay-file-tag {
+  font-weight: 600;
+}
+#study-guide-page .underlay-stamp {
+  font-weight: 700;
+  padding: 2px 8px;
+  background: rgba(17, 20, 26, 0.05);
+  border-radius: 4px;
+  letter-spacing: 0.1em;
+}
+
+/* Depth Layer 2: Main Editorial Hero Image Frame with Distinctive Asymmetric Architectural Silhouette */
+#study-guide-page .hero-master-image-frame {
+  position: relative;
+  z-index: 2;
+  border-radius: 48px 14px 64px 20px;
+  overflow: hidden;
+  box-shadow: 0 32px 75px -15px rgba(17, 20, 26, 0.18), 0 12px 30px -8px rgba(17, 20, 26, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  background: #f0ede6;
+  will-change: transform;
+  transform-origin: center center;
+}
+#study-guide-page .hero-master-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+#study-guide-page .hero-frame-sheen {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.06) 100%);
+  pointer-events: none;
+}
+
+/* Depth Layer 3: Physical Note Fragment (Handwritten lecture cue converging) */
+#study-guide-page .hero-paper-fragment {
+  position: absolute;
+  top: -24px;
+  left: -20px;
+  z-index: 4;
+  background: #ffffff;
+  border: 1px solid rgba(17, 20, 26, 0.09);
+  border-radius: 10px 16px 8px 14px;
+  box-shadow: 0 16px 36px rgba(17, 20, 26, 0.1), 0 4px 12px rgba(17, 20, 26, 0.05);
+  transform: rotate(-4.5deg);
+  padding: 14px 18px;
+  max-width: 240px;
+  pointer-events: none;
+  will-change: transform;
+}
+#study-guide-page .fragment-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  position: relative;
+}
+#study-guide-page .fragment-pin {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #d4a373;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+#study-guide-page .fragment-topic {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--berry);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+#study-guide-page .fragment-eq {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 2px 0;
+}
+#study-guide-page .fragment-meta {
+  font-size: 0.68rem;
+  color: var(--ink-muted);
+}
+
+/* Depth Layer 4: Translucent Structured Product UI Panel (Edge-positioned on bottom right, unblocking focal point) */
+#study-guide-page .hero-structured-panel {
+  position: absolute;
+  bottom: -22px;
+  right: -16px;
+  z-index: 5;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 16px 22px 12px 20px;
+  box-shadow: 0 20px 48px rgba(17, 20, 26, 0.14), 0 6px 18px rgba(17, 20, 26, 0.06);
+  padding: 16px 20px;
+  max-width: 320px;
+  pointer-events: auto;
+  will-change: transform;
+}
+#study-guide-page .panel-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+#study-guide-page .panel-pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--berry);
+  box-shadow: 0 0 8px var(--berry);
+  animation: pulseDot 2.2s infinite;
+}
+@keyframes pulseDot {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+#study-guide-page .panel-kicker {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--berry);
+  text-transform: uppercase;
+}
+#study-guide-page .panel-body {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+#study-guide-page .panel-title-text {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.35;
+}
+#study-guide-page .panel-meta-text {
+  font-size: 0.74rem;
+  color: var(--ink-muted);
+}
+
+/* Mobile Responsiveness for Hero Visual */
+@media (max-width: 768px) {
+  #study-guide-page .hero-composition-wrap {
+    max-width: 100%;
+    margin-top: 24px;
+  }
+  #study-guide-page .hero-master-image-frame {
+    border-radius: 36px 12px 44px 16px;
+  }
+  #study-guide-page .hero-paper-fragment {
+    top: -16px;
+    left: -8px;
+    padding: 10px 14px;
+    max-width: 200px;
+  }
+  #study-guide-page .hero-perimeter-badge {
+    top: -14px;
+    right: 8px;
+    padding: 6px 10px;
+    font-size: 0.7rem;
+  }
+  #study-guide-page .hero-structured-panel {
+    bottom: -16px;
+    right: -8px;
+    padding: 12px 16px;
+    max-width: 270px;
+  }
+  /* On tablets/mobile keep 2 lanes to preserve clean canvas */
+  #study-guide-page .mat-lane-2,
+  #study-guide-page .mat-lane-4 {
+    display: none;
+  }
+  #study-guide-page .mat-lane-1 {
+    top: 14px;
+    opacity: 0.12;
+  }
+  #study-guide-page .mat-lane-3 {
+    bottom: 24px;
+    opacity: 0.12;
+  }
+}
+@media (max-width: 480px) {
+  #study-guide-page .hero-master-image-frame {
+    border-radius: 28px 10px 36px 14px;
+  }
+  #study-guide-page .hero-paper-fragment,
+  #study-guide-page .hero-perimeter-badge {
+    display: none;
+  }
+  #study-guide-page .hero-material-backdrop {
+    display: none;
+  }
+  #study-guide-page .hero-structured-panel {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 16px;
+    max-width: 100%;
+    border-radius: 14px;
+  }
+}
+
+/* ====================================================================
+   ACT 4: STUDENT STAGE — CONTINUOUS 3-STEP PIPELINE
+   ==================================================================== */
+#study-guide-page .act-student-stage {
+  position: relative;
+  background: var(--cream);
+  padding: 100px 24px;
+}
+#study-guide-page .student-stage-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#study-guide-page .stage-section-head {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 60px;
+}
+#study-guide-page .stage-eyebrow {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--berry);
+  margin-bottom: 14px;
+  display: block;
+}
+#study-guide-page .stage-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--ink);
+  margin-bottom: 18px;
+}
+#study-guide-page .stage-desc {
+  font-size: 1.1rem;
+  color: var(--ink-secondary);
+  line-height: 1.6;
+}
+
+/* Continuous Horizontal / Vertical Connected Pipeline */
+#study-guide-page .continuous-pipeline-wrap {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 992px) {
+  #study-guide-page .continuous-pipeline-wrap {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+}
+
+#study-guide-page .pipeline-step-node {
+  position: relative;
+  background: var(--white);
+  border-radius: 20px;
+  padding: 36px 28px;
+  border: 1.5px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--dur-fast) ease;
+}
+#study-guide-page .pipeline-step-node:hover {
+  border-color: var(--berry);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(17, 20, 26, 0.08);
+}
+
+#study-guide-page .node-num-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+#study-guide-page .node-num-badge {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--berry);
+  letter-spacing: -0.04em;
+}
+#study-guide-page .node-step-tag {
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(168, 0, 90, 0.08);
+  color: var(--berry);
+}
+#study-guide-page .node-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+#study-guide-page .node-text {
+  font-size: 0.95rem;
+  color: var(--ink-secondary);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* Interactive Preview Box Inside Step */
+#study-guide-page .node-visual-preview {
+  margin-top: auto;
+  background: var(--cream);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid var(--border-subtle);
+}
+#study-guide-page .preview-mini-title {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 8px;
+}
+#study-guide-page .preview-mini-content {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* ====================================================================
+   ACT 5: CHAPTER DECONSTRUCT & MULTIMODAL ECOSYSTEM
+   ==================================================================== */
+#study-guide-page .act-chapter-deconstruct {
+  position: relative;
+  background: var(--white);
+  padding: 100px 24px;
+}
+#study-guide-page .deconstruct-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+#study-guide-page .deconstruct-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 56px;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  #study-guide-page .deconstruct-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+#study-guide-page .deconstruct-image-frame {
+  position: relative;
+  border-radius: 36px 12px 48px 16px;
+  border: 1px solid rgba(17, 20, 26, 0.08);
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(17, 20, 26, 0.12);
+}
+#study-guide-page .deconstruct-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Multimodal Interactive Sandbox */
+#study-guide-page .multimodal-sandbox {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#study-guide-page .multimodal-box {
+  background: var(--cream);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1.5px solid var(--border-subtle);
+  transition: all var(--dur-fast) ease;
+}
+#study-guide-page .multimodal-box:hover {
+  border-color: var(--berry);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+#study-guide-page .mm-box-tag {
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--berry);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+#study-guide-page .mm-box-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+#study-guide-page .mm-box-text {
+  font-size: 0.92rem;
+  color: var(--ink-secondary);
+  line-height: 1.5;
+}
+
+/* Interactive Podcast Player Component */
+#study-guide-page .player-interface {
+  margin-top: 14px;
+  background: var(--white);
+  border-radius: 12px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+#study-guide-page .btn-play-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--berry);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px var(--berry-glow);
+  transition: transform 0.2s ease;
+}
+#study-guide-page .btn-play-toggle:hover { transform: scale(1.05); }
+#study-guide-page .waveform-track {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 24px;
+}
+#study-guide-page .wave-bar {
+  width: 3px;
+  height: 12px;
+  background: var(--border-medium);
+  border-radius: 2px;
+  transition: height 0.2s ease, background 0.2s ease;
+}
+#study-guide-page .wave-bar.active {
+  background: var(--berry);
+  height: 20px;
+}
+#study-guide-page .track-time {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--ink-muted);
+}
+
+/* ====================================================================
+   ACT 6: DEPTH & CALIBRATION (BRANCHING SESSIONS & EQUALIZER)
+   ==================================================================== */
+#study-guide-page .act-depth-calibration {
+  position: relative;
+  background: var(--cream);
+  padding: 100px 24px;
+}
+#study-guide-page .depth-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#study-guide-page .depth-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+@media (min-width: 992px) {
+  #study-guide-page .depth-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+  }
+}
+
+#study-guide-page .depth-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 40px 32px;
+  border: 1.5px solid var(--border-subtle);
+}
+#study-guide-page .depth-tag {
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cerulean);
+  margin-bottom: 12px;
+}
+#study-guide-page .depth-h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+#study-guide-page .depth-desc {
+  font-size: 0.96rem;
+  color: var(--ink-secondary);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+/* Branching Nodes visualization */
+#study-guide-page .branch-nodes-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+#study-guide-page .branch-node {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: var(--cream);
+  border: 1px solid var(--border-subtle);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+#study-guide-page .branch-node.active-deep {
+  border-color: var(--berry);
+  background: rgba(168, 0, 90, 0.05);
+}
+#study-guide-page .branch-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--ink-muted);
+}
+#study-guide-page .branch-node.active-deep .branch-dot {
+  background: var(--berry);
+  box-shadow: 0 0 8px var(--berry);
+}
+
+/* Equalizer Sliders */
+#study-guide-page .equalizer-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#study-guide-page .eq-slider-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#study-guide-page .eq-label-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+#study-guide-page .eq-range {
+  width: 100%;
+  accent-color: var(--cerulean);
+  cursor: pointer;
+}
+#study-guide-page .eq-output-badge {
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 10px;
+  background: rgba(9, 96, 160, 0.06);
+  border: 1px solid rgba(9, 96, 160, 0.2);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--cerulean);
+  text-align: center;
+}
+
+/* ====================================================================
+   ACT 7: THE TUTOR ACT (IMMERSIVE CERULEAN MOMENT)
+   ==================================================================== */
+/* ====================================================================
+   ACT 7: FOR TUTORS AND TEACHERS: DEFINE A COURSE, ASSIGN IT, AND FOLLOW EVERY STUDENT
+   ==================================================================== */
+#study-guide-page .act-cerulean-tutors {
+  position: relative;
+  background: linear-gradient(180deg, #0960A0 0%, #064573 100%);
+  color: #FFFFFF;
+  padding: 100px 24px 80px;
+  overflow: hidden;
+}
+#study-guide-page .tutors-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+#study-guide-page .tutors-header {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 56px;
+}
+#study-guide-page .tutors-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  line-height: 1.15;
+  color: #FFFFFF;
+  margin-bottom: 18px;
+  letter-spacing: -0.015em;
+}
+#study-guide-page .tutors-desc {
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+/* 2-Column Stage Grid */
+#study-guide-page .tutor-stage-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: stretch;
+  margin-bottom: 64px;
+}
+@media (min-width: 1024px) {
+  #study-guide-page .tutor-stage-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 48px;
+  }
+}
+
+/* Left: Interactive Product Visualization Stage */
+#study-guide-page .tutor-stage-visual {
+  position: relative;
+  min-height: 480px;
+  display: flex;
+}
+#study-guide-page .tutor-visual-panel {
+  width: 100%;
+  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+#study-guide-page .tutor-visual-panel.is-active {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+#study-guide-page .tutor-panel-card {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  padding: 32px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 48px -12px rgba(0, 0, 0, 0.35);
+}
+
+/* Panel Header */
+#study-guide-page .tutor-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+#study-guide-page .tutor-panel-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #7dd3fc;
+}
+#study-guide-page .tutor-panel-status {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+
+/* Panel 1: Meta Box & Material Chips */
+#study-guide-page .tutor-course-meta-box {
+  background: rgba(15, 23, 42, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 20px 22px;
+  margin-bottom: 20px;
+}
+#study-guide-page .course-meta-title-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+#study-guide-page .meta-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #94a3b8;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+#study-guide-page .meta-value {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #fff;
+}
+#study-guide-page .course-meta-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+#study-guide-page .spec-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+#study-guide-page .spec-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+#study-guide-page .spec-val {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+#study-guide-page .tutor-material-stack {
+  margin-bottom: 20px;
+}
+#study-guide-page .material-stack-title {
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #cbd5e1;
+  display: block;
+  margin-bottom: 10px;
+}
+#study-guide-page .material-items-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+@media (min-width: 600px) {
+  #study-guide-page .material-items-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+#study-guide-page .material-chip {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+#study-guide-page .chip-icon {
+  font-size: 1rem;
+}
+#study-guide-page .chip-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Panel 2: Distribution to Students */
+#study-guide-page .tutor-assign-origin {
+  display: flex;
+  justify-content: center;
+}
+#study-guide-page .assign-origin-box {
+  background: rgba(15, 23, 42, 0.3);
+  border: 1.5px solid rgba(56, 189, 248, 0.4);
+  border-radius: 14px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+#study-guide-page .assign-origin-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #0284c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+#study-guide-page .assign-origin-info {
+  display: flex;
+  flex-direction: column;
+}
+#study-guide-page .origin-tag {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #38bdf8;
+}
+#study-guide-page .origin-name {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #fff;
+}
+#study-guide-page .tutor-distribution-connector {
+  width: 100%;
+  max-width: 360px;
+  height: 36px;
+  margin: 0 auto;
+}
+#study-guide-page .distrib-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#study-guide-page .tutor-recipients-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+#study-guide-page .recipient-card {
+  background: rgba(15, 23, 42, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+#study-guide-page .recipient-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+#study-guide-page .recipient-meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+#study-guide-page .recipient-title {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #fff;
+}
+#study-guide-page .recipient-desc {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+#study-guide-page .recipient-check {
+  color: #38bdf8;
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+/* Panel 3: Individual Progress Check */
+#study-guide-page .tutor-progress-student-header {
+  background: rgba(15, 23, 42, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+#study-guide-page .student-inspect-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0284c7, #38bdf8);
+  color: #fff;
+  font-weight: 900;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#study-guide-page .student-inspect-info {
+  display: flex;
+  flex-direction: column;
+}
+#study-guide-page .inspect-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #7dd3fc;
+}
+#study-guide-page .inspect-course {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #fff;
+}
+#study-guide-page .tutor-progress-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+#study-guide-page .timeline-step {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.2s ease;
+}
+#study-guide-page .timeline-step.is-current {
+  background: rgba(56, 189, 248, 0.12);
+  border-color: rgba(56, 189, 248, 0.4);
+}
+#study-guide-page .timeline-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: #38bdf8;
+  font-size: 0.75rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+#study-guide-page .timeline-step.is-completed .timeline-dot {
+  background: #0284c7;
+  color: #fff;
+}
+#study-guide-page .timeline-step.is-current .timeline-dot {
+  background: #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
+}
+#study-guide-page .timeline-info {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#study-guide-page .timeline-topic {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #fff;
+}
+#study-guide-page .timeline-status {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+#study-guide-page .timeline-status.highlight {
+  color: #38bdf8;
+  font-weight: 800;
+}
+
+#study-guide-page .tutor-panel-footer {
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+#study-guide-page .footer-note {
+  font-size: 0.76rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 600;
+  line-height: 1.4;
+  display: block;
+}
+
+/* Right: 3 Approved Steps Selector */
+#study-guide-page .tutor-steps-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+}
+#study-guide-page .tutor-step-item {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
+  padding: 24px 26px;
+  cursor: pointer;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+#study-guide-page .tutor-step-item:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateX(4px);
+}
+#study-guide-page .tutor-step-item.is-active {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: #38bdf8;
+  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.25), inset 0 0 0 1px rgba(56, 189, 248, 0.4);
+  transform: translateX(6px);
+}
+#study-guide-page .step-badge-row {
+  margin-bottom: 8px;
+}
+#study-guide-page .step-number-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7dd3fc;
+  background: rgba(56, 189, 248, 0.15);
+  padding: 3px 8px;
+  border-radius: 8px;
+}
+#study-guide-page .step-item-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+#study-guide-page .step-item-desc {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Table 5: Tutor Consultation Card */
+#study-guide-page .tutor-consult-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 44px 36px;
+  text-align: center;
+  max-width: 840px;
+  margin: 0 auto;
+  box-shadow: 0 20px 48px -12px rgba(15, 23, 42, 0.18);
+}
+#study-guide-page .tutor-consult-title {
+  font-size: clamp(1.4rem, 2.8vw, 1.85rem);
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+#study-guide-page .tutor-consult-desc {
+  font-size: 1.05rem;
+  color: var(--ink-secondary);
+  margin-bottom: 26px;
+  line-height: 1.5;
+}
+#study-guide-page .tutor-actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+#study-guide-page .btn-tutor-primary {
+  padding: 14px 30px;
+  border-radius: 10px;
+  background: var(--cerulean);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.25);
+}
+#study-guide-page .btn-tutor-primary:hover {
+  background: #0369a1;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(2, 132, 199, 0.35);
+}
+#study-guide-page .btn-tutor-tel {
+  padding: 13px 26px;
+  border-radius: 10px;
+  background: var(--cream);
+  border: 1.5px solid var(--border-medium);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 0.98rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+#study-guide-page .btn-tutor-tel:hover {
+  background: #fff;
+  border-color: var(--ink);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+  #study-guide-page .act-cerulean-tutors {
+    padding: 72px 16px 60px;
+  }
+  #study-guide-page .tutor-panel-card {
+    padding: 24px 18px;
+  }
+  #study-guide-page .course-meta-specs {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  #study-guide-page .tutor-step-item {
+    padding: 20px 18px;
+  }
+  #study-guide-page .tutor-consult-card {
+    padding: 32px 20px;
+  }
+  #study-guide-page .tutor-actions-row {
+    flex-direction: column;
+    width: 100%;
+  }
+  #study-guide-page .btn-tutor-primary,
+  #study-guide-page .btn-tutor-tel {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ====================================================================
+   ACT 9: AUDIENCE SPLIT & ALL 13 APPROVED FAQS
+   ==================================================================== */
+#study-guide-page .act-audience-faq {
+  position: relative;
+  background: var(--white);
+  padding: 100px 24px;
+}
+#study-guide-page .faq-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#study-guide-page .faq-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+#study-guide-page .faq-tag {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--berry);
+  margin-bottom: 12px;
+  display: block;
+}
+#study-guide-page .faq-h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--ink);
+}
+
+#study-guide-page .faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+#study-guide-page .faq-item {
+  border: 1.5px solid var(--border-subtle);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all var(--dur-fast) ease;
+  background: var(--cream);
+}
+#study-guide-page .faq-item:hover { border-color: rgba(17, 20, 26, 0.2); }
+#study-guide-page .faq-item.is-open {
+  border-color: var(--berry);
+  background: var(--white);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+#study-guide-page .faq-trigger {
+  width: 100%;
+  padding: 22px 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--ink);
+  gap: 16px;
+}
+#study-guide-page .faq-item.is-open .faq-trigger { color: var(--berry); }
+#study-guide-page .faq-chevron {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+#study-guide-page .faq-item.is-open .faq-chevron {
+  transform: rotate(180deg);
+  background: rgba(168, 0, 90, 0.1);
+  color: var(--berry);
+}
+#study-guide-page .faq-answer-collapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+#study-guide-page .faq-item.is-open .faq-answer-collapse {
+  max-height: 400px;
+}
+#study-guide-page .faq-answer-body {
+  padding: 0 26px 24px;
+  font-size: 0.96rem;
+  color: var(--ink-secondary);
+  line-height: 1.65;
+}
+
+/* ====================================================================
+   ACT 10: REGISTRATION FINALE & LEAD CAPTURE FORM
+   ==================================================================== */
+#study-guide-page .act-registration-finale {
+  position: relative;
+  background: var(--cream);
+  padding: 100px 24px;
+}
+#study-guide-page .finale-inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+#study-guide-page .finale-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+#study-guide-page .finale-title {
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+  font-weight: 900;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+#study-guide-page .finale-desc {
+  font-size: 1.1rem;
+  color: var(--ink-secondary);
+  line-height: 1.6;
+}
+
+#study-guide-page .registration-card {
+  background: var(--white);
+  border-radius: 24px;
+  padding: 44px 36px;
+  border: 1.5px solid var(--border-medium);
+  box-shadow: 0 24px 80px rgba(17, 20, 26, 0.08);
+}
+#study-guide-page .form-field-group {
+  margin-bottom: 22px;
+}
+#study-guide-page .form-field-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+#study-guide-page .req-tag {
+  color: var(--berry);
+  font-size: 0.74rem;
+}
+#study-guide-page .form-control-input {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--ink);
+  background: var(--cream);
+  border: 1.5px solid var(--border-medium);
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+#study-guide-page .form-control-input:focus {
+  border-color: var(--berry);
+  background: var(--white);
+  box-shadow: 0 0 0 4px var(--berry-tint);
+}
+#study-guide-page .form-control-input.is-invalid {
+  border-color: #C0392B;
+  background: #FFF9F9;
+}
+#study-guide-page .field-error-msg {
+  font-size: 0.78rem;
+  color: #C0392B;
+  font-weight: 600;
+  margin-top: 6px;
+  display: none;
+}
+#study-guide-page .form-control-input.is-invalid ~ .field-error-msg {
+  display: block;
+}
+
+#study-guide-page .consent-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 28px 0;
+}
+#study-guide-page .consent-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.84rem;
+  color: var(--ink-secondary);
+}
+#study-guide-page .consent-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--berry);
+  margin-top: 2px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+#study-guide-page .consent-item a {
+  color: var(--berry);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+#study-guide-page .btn-form-submit {
+  width: 100%;
+  padding: 18px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #fff;
+  background: var(--berry);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 8px 30px var(--berry-glow);
+  transition: all 0.2s ease;
+}
+#study-guide-page .btn-form-submit:hover {
+  background: #8E004B;
+  transform: translateY(-2px);
+}
+#study-guide-page .btn-form-submit:active { transform: scale(0.98); }
+
+#study-guide-page .form-alert {
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: none;
+}
+#study-guide-page .form-alert.success {
+  background: #E8F8F0;
+  color: #1B8A4A;
+  border: 1px solid rgba(39, 174, 96, 0.25);
+  display: block;
+}
+#study-guide-page .form-alert.warning {
+  background: #FEF3EB;
+  color: #C0392B;
+  border: 1px solid rgba(211, 84, 0, 0.25);
+  display: block;
+}
+
+/* ====================================================================
+   PRODUCT WALKTHROUGH MODAL (SCOPED TO #study-guide-page)
+   ==================================================================== */
+#study-guide-page .walkthrough-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+#study-guide-page .walkthrough-modal.is-open { display: flex; }
+#study-guide-page .modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 20, 26, 0.75);
+  backdrop-filter: blur(8px);
+}
+#study-guide-page .modal-window {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 860px;
+  background: #000;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+}
+#study-guide-page .modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+#study-guide-page .modal-close-btn:hover { background: rgba(255, 255, 255, 0.4); }
+
+
+
+
+/* ====================================================================
+   APPROVED CONTENT STYLES: TUTOR PILLARS & WHO STUDY GUIDE IS FOR
+   ==================================================================== */
+#study-guide-page .chip-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: #38bdf8;
+}
+#study-guide-page .chip-icon svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  display: block;
+}
+#study-guide-page .material-piece .mat-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  line-height: 1;
+  opacity: 0.9;
+  color: #cbd5e1;
+}
+#study-guide-page .material-piece .mat-icon svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  display: block;
+}
+#study-guide-page .recipient-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(56, 189, 248, 0.2);
+  color: #38bdf8;
+}
+#study-guide-page .recipient-check svg {
+  display: block;
+  stroke: currentColor;
+}
+#study-guide-page .timeline-dot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+#study-guide-page .timeline-dot svg {
+  display: block;
+  stroke: currentColor;
+}
+
+/* 4 Approved Tutor Pillars */
+#study-guide-page .tutor-pillars-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 48px;
+  margin-bottom: 40px;
+}
+@media (min-width: 768px) {
+  #study-guide-page .tutor-pillars-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1100px) {
+  #study-guide-page .tutor-pillars-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+#study-guide-page .tutor-pillar-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 16px;
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+#study-guide-page .tutor-pillar-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+#study-guide-page .pillar-title {
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+#study-guide-page .pillar-desc {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+/* Approved Section: Who Study Guide is for */
+#study-guide-page .act-audience-fit {
+  position: relative;
+  background: var(--cream);
+  padding: 80px 24px;
+}
+#study-guide-page .audience-fit-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#study-guide-page .fit-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+#study-guide-page .fit-title {
+  font-size: clamp(2rem, 3.8vw, 2.75rem);
+  font-weight: 900;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+#study-guide-page .fit-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 768px) {
+  #study-guide-page .fit-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+#study-guide-page .fit-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 36px 32px;
+  border: 1.5px solid var(--border-subtle);
+  box-shadow: 0 4px 20px rgba(17, 20, 26, 0.04);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+#study-guide-page .fit-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--cerulean);
+  box-shadow: 0 16px 40px rgba(0, 140, 211, 0.08);
+}
+#study-guide-page .fit-card-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+#study-guide-page .fit-card-desc {
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--ink-secondary);
+}
+
+#study-guide-page .depth-card.full-width-card {
+  grid-column: 1 / -1;
+  margin-top: 16px;
+}
+
+
