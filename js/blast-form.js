@@ -8,7 +8,7 @@
 
   // Global state
   const state = {
-    currentPlan: 'annual', // 'annual' | 'monthly'
+    currentPlan: 'all_access_1699',
     currentBoard: 'CBSE',  // 'CBSE' | 'ICSE' | 'State board'
     formData: {
       studentName: '',
@@ -27,31 +27,19 @@
       cardCvv: '',
       billingPin: '',
       cardName: '',
-      plan: 'annual'
+      plan: 'all_access_1699'
     }
   };
 
   // Expose plan selector globally
   window.selectBlastPlan = function(plan) {
-    if (plan !== 'monthly' && plan !== 'annual') return;
-    state.currentPlan = plan;
-    state.formData.plan = plan;
-
-    document.querySelectorAll('.plan-option').forEach(el => {
-      const elPlan = el.getAttribute('data-plan');
-      if (elPlan === plan) {
-        el.classList.add('is-selected');
-        el.setAttribute('aria-checked', 'true');
-      } else {
-        el.classList.remove('is-selected');
-        el.setAttribute('aria-checked', 'false');
-      }
-    });
+    state.currentPlan = 'all_access_1699';
+    state.formData.plan = 'all_access_1699';
 
     // Update submit button text / helper if needed
-    const submitBtn = document.getElementById('trial-submit-btn');
+    const submitBtn = document.getElementById('btn-submit-trial') || document.getElementById('trial-submit-btn');
     if (submitBtn) {
-      submitBtn.setAttribute('data-plan-target', plan);
+      submitBtn.setAttribute('data-plan-target', 'all_access_1699');
     }
   };
 
@@ -316,14 +304,14 @@
      06. RAZORPAY INTEGRATION LAYER
      -------------------------------------------------------------------------- */
   function launchRazorpayTrialAuth(payload) {
-    const submitBtn = document.getElementById('trial-submit-btn');
+    const submitBtn = document.getElementById('btn-submit-trial') || document.getElementById('trial-submit-btn');
     if (submitBtn) {
       submitBtn.disabled = true;
       submitBtn.innerHTML = `
         <svg class="animate-spin" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation: spin 1s linear infinite; margin-right:8px; display:inline-block;">
           <circle cx="12" cy="12" r="10" stroke-dasharray="32" stroke-dashoffset="10"></circle>
         </svg>
-        Securing 14-day trial on Razorpay...
+        Securing 7-day trial on Razorpay...
       `;
     }
 
@@ -332,7 +320,7 @@
       showRazorpayModal(payload);
       if (submitBtn) {
         submitBtn.disabled = false;
-        submitBtn.innerHTML = 'Start the 14-day free trial <span class="btn-arrow">→</span>';
+        submitBtn.innerHTML = 'Start the 7-day free trial <span class="btn-arrow">→</span>';
       }
     }, 900);
   }
@@ -342,7 +330,7 @@
     const existing = document.getElementById('blast-razorpay-modal');
     if (existing) existing.remove();
 
-    const planPrice = data.plan === 'annual' ? '₹9,588 / year (₹799/mo)' : '₹1,299 / month';
+    const planPrice = '₹1,699 / month';
 
     const modal = document.createElement('div');
     modal.id = 'blast-razorpay-modal';
@@ -371,7 +359,7 @@
             ✓
           </div>
           <div>
-            <h3 style="font-size:1.25rem; font-weight:800; color:#0f172a; margin:0;">14-Day Free Trial Activated</h3>
+            <h3 style="font-size:1.25rem; font-weight:800; color:#0f172a; margin:0;">7-Day Free Trial Activated</h3>
             <p style="font-size:0.75rem; color:#6b7280; margin:2px 0 0;">Card Verified · Razorpay 256-bit Token Vault</p>
           </div>
         </div>
@@ -387,7 +375,7 @@
           </div>
           <div style="display:flex; justify-content:space-between; margin-bottom:0.4rem;">
             <span style="color:#64748b;">Chosen Plan:</span>
-            <strong style="color:#0f172a;">${data.plan.toUpperCase()} · ${planPrice}</strong>
+            <strong style="color:#0f172a;">ALL-ACCESS MEMBERSHIP · ${planPrice}</strong>
           </div>
           <div style="display:flex; justify-content:space-between; margin-bottom:0.4rem;">
             <span style="color:#64748b;">Charged Today:</span>
@@ -395,7 +383,7 @@
           </div>
           <div style="display:flex; justify-content:space-between; border-top:1px dashed #cbd5e1; padding-top:0.4rem; margin-top:0.4rem;">
             <span style="color:#64748b;">First Charge Date:</span>
-            <strong style="color:#0f172a;">Day 15 (Cancel anytime before)</strong>
+            <strong style="color:#0f172a;">Day 8 (Cancel anytime before)</strong>
           </div>
         </div>
 
@@ -404,7 +392,7 @@
           <ul style="list-style:disc; margin-left:1.2rem; margin-top:0.4rem;">
             <li>We have sent your child's calibration invite link to <strong>+91 ${data.parentPhone}</strong> on WhatsApp.</li>
             <li>Calibration week begins with short 10-minute baseline sessions.</li>
-            <li>Cancel inside your parent dashboard at any time before Day 15 for ₹0 charge.</li>
+            <li>Cancel inside your parent dashboard at any time before Day 8 for ₹0 charge.</li>
           </ul>
         </div>
 
