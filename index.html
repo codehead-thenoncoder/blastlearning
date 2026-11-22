@@ -14,53 +14,65 @@
    Pixel-Perfect Match to https://blastlearning.in/
    ==================================================================== */
 
+/* Outer sticky header with soft drop shadow */
+body:not(.elementor-editor-active) .elementor-location-header,
 header.elementor-55.elementor-location-header {
-  width: 100% !important;
   position: sticky !important;
   top: 0 !important;
   left: 0 !important;
-  z-index: 9999 !important;
+  width: 100% !important;
+  z-index: 99999 !important;
   background-color: #ffffff !important;
-  border-bottom: 1px solid #de0158 !important;
-  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.04) inset !important;
+  box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.08) !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
 }
 
 /* Neutralize Elementor flex-grow zero-width calculation on widgets */
 .elementor-55 * {
   --container-widget-width: auto !important;
+  box-sizing: border-box !important;
 }
 
-/* Master Header Container (1200px max width centered, single horizontal row) */
+/* Master Header Container: 1200px max width centered, magenta bottom line and subtle inset shadow */
 .elementor-55 .elementor-element-3c6acfc,
 .elementor-55 .e-3c6acfc-62e36c9 {
+  width: 1200px !important;
+  max-width: 100% !important;
+  min-height: 70px !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  z-index: 999 !important;
+  border-width: 0 0 1px 0 !important;
+  border-style: solid !important;
+  border-color: #de0158 !important;
+  background-color: #ffffff !important;
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.04) inset !important;
+  transform: translate3d(0px, 0px, 0px) !important;
   display: flex !important;
   flex-direction: row !important;
   flex-wrap: nowrap !important;
-  justify-content: space-between !important;
+  gap: 14px !important;
+  justify-content: center !important;
   align-items: center !important;
-  width: 1200px !important;
-  max-width: 100% !important;
-  min-height: 125px !important;
-  margin: 0 auto !important;
-  padding: 22px 24px 28px 24px !important;
+  padding: 10px !important;
   box-sizing: border-box !important;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  position: relative !important;
 }
 
-/* Left Group: Logo + Navigation */
+/* Left Group: Logo + Desktop Nav Menu */
 .elementor-55 .elementor-element-e7376c1 {
   display: flex !important;
   flex-direction: row !important;
+  flex-wrap: nowrap !important;
   align-items: center !important;
-  justify-content: flex-start !important;
-  flex: 0 0 auto !important;
-  width: auto !important;
-  gap: 36px !important;
+  justify-content: center !important;
+  flex: 0 0 70% !important;
+  width: 70% !important;
   margin: 0 !important;
   padding: 0 !important;
+  gap: 20px !important;
 }
 
 /* Logo */
@@ -68,14 +80,15 @@ header.elementor-55.elementor-location-header {
   display: flex !important;
   align-items: center !important;
   flex: 0 0 auto !important;
-  width: auto !important;
+  width: 120px !important;
   margin: 0 !important;
   padding: 0 !important;
 }
 .elementor-55 .elementor-element-1699c44 img {
   width: 117px !important;
-  height: 59px !important;
   max-width: 120px !important;
+  height: 59px !important;
+  object-fit: contain !important;
   display: block !important;
 }
 
@@ -83,6 +96,7 @@ header.elementor-55.elementor-location-header {
 .elementor-55 .elementor-element-a9d4c74 {
   display: flex !important;
   align-items: center !important;
+  justify-content: center !important;
   flex: 0 0 auto !important;
   width: auto !important;
   margin: 0 !important;
@@ -93,6 +107,7 @@ header.elementor-55.elementor-location-header {
 .elementor-55 .elementor-nav-menu--main {
   display: flex !important;
   align-items: center !important;
+  justify-content: center !important;
   width: auto !important;
 }
 .elementor-55 .elementor-nav-menu--main ul.elementor-nav-menu {
@@ -100,196 +115,198 @@ header.elementor-55.elementor-location-header {
   flex-direction: row !important;
   flex-wrap: nowrap !important;
   align-items: center !important;
+  justify-content: center !important;
   list-style: none !important;
   margin: 0 !important;
   padding: 0 !important;
-  width: auto !important;
-  gap: 6px !important;
 }
-.elementor-55 .elementor-nav-menu--main > ul.elementor-nav-menu > li {
+.elementor-55 .elementor-nav-menu--main ul.elementor-nav-menu > li {
   display: inline-flex !important;
   align-items: center !important;
-  flex: 0 0 auto !important;
-  width: auto !important;
+  list-style: none !important;
   margin: 0 !important;
   padding: 0 !important;
   position: relative !important;
-  list-style: none !important;
 }
 .elementor-55 .elementor-nav-menu--main .elementor-item {
-  font-family: "Poppins", Sans-serif !important;
+  font-family: 'Poppins', Sans-serif !important;
   font-size: 16px !important;
   font-weight: 500 !important;
+  line-height: 20px !important;
   color: #1A1A1A !important;
   fill: #1A1A1A !important;
-  padding: 10px 14px !important;
+  padding: 13px 20px !important;
+  margin: 0 13px !important;
   display: inline-flex !important;
   align-items: center !important;
   text-decoration: none !important;
   position: relative !important;
-  transition: color 0.2s ease, fill 0.2s ease !important;
-  line-height: 1.2 !important;
   white-space: nowrap !important;
+  transition: color 0.25s ease, fill 0.25s ease !important;
+}
+.elementor-55 .elementor-nav-menu--main ul.elementor-nav-menu > li:first-child a.elementor-item {
+  margin: 0 13px 0 0 !important;
+}
+.elementor-55 .elementor-nav-menu--main ul.elementor-nav-menu > li:last-child a.elementor-item {
+  margin: 0 0 0 13px !important;
 }
 .elementor-55 .elementor-nav-menu--main .elementor-item:hover,
-.elementor-55 .elementor-nav-menu--main .elementor-item.elementor-item-active {
+.elementor-55 .elementor-nav-menu--main .elementor-item:focus {
   color: #ED1E79 !important;
   fill: #ED1E79 !important;
 }
+.elementor-55 .elementor-nav-menu--main .elementor-item.elementor-item-active {
+  color: #D1007F !important;
+  fill: #D1007F !important;
+}
 
-/* Active Underline for Home / Current page */
+/* Active Underline */
 .elementor-55 .elementor-nav-menu--main .elementor-item.elementor-item-active::after {
   content: "" !important;
-  position: absolute !important;
-  bottom: -2px !important;
-  left: 14px !important;
-  right: 14px !important;
-  height: 2px !important;
-  background-color: #D1007F !important;
   display: block !important;
+  position: absolute !important;
+  bottom: 0px !important;
+  left: 0px !important;
+  width: 100% !important;
+  height: 1px !important;
+  background-color: #D1007F !important;
 }
 
-/* Courses Dropdown Chevron Icon */
-.elementor-55 .elementor-item .sub-arrow {
-  display: inline-flex !important;
+/* Chevron Down Arrow Icon inside Courses */
+.elementor-55 .elementor-nav-menu .sub-arrow {
   align-items: center !important;
-  margin-left: 6px !important;
-  vertical-align: middle !important;
+  display: inline-flex !important;
+  line-height: 1 !important;
+  margin-top: -10px !important;
+  margin-bottom: -10px !important;
+  padding: 10px 0 10px 10px !important;
 }
-.elementor-55 .elementor-item .sub-arrow svg {
-  width: 10px !important;
-  height: 10px !important;
+.elementor-55 .elementor-nav-menu .sub-arrow svg {
+  width: 1em !important;
+  height: 1em !important;
   fill: currentColor !important;
   transition: transform 0.25s ease !important;
 }
+.elementor-55 .elementor-nav-menu--main li.menu-item-has-children:hover .sub-arrow svg {
+  transform: rotate(180deg) !important;
+}
 
 /* Desktop Dropdown Sub-menu */
-@media (min-width: 1025px) {
-  .elementor-55 .elementor-menu-toggle {
-    display: none !important;
-  }
-  .elementor-55 .elementor-nav-menu--dropdown.elementor-nav-menu__container {
-    display: none !important;
-  }
-  .elementor-55 .elementor-nav-menu--main li.menu-item-has-children {
-    position: relative !important;
-  }
-  .elementor-55 .elementor-nav-menu--main li.menu-item-has-children > .sub-menu {
-    position: absolute !important;
-    top: 100% !important;
-    left: 0 !important;
-    min-width: 210px !important;
-    background-color: #008CD3 !important;
-    border-radius: 10px !important;
-    padding: 6px 0 !important;
-    margin: 4px 0 0 0 !important;
-    list-style: none !important;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
-    display: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-    transform: translateY(6px) !important;
-    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease !important;
-    z-index: 10000 !important;
-  }
-  .elementor-55 .elementor-nav-menu--main li.menu-item-has-children:hover > .sub-menu,
-  .elementor-55 .elementor-nav-menu--main li.menu-item-has-children:focus-within > .sub-menu {
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: translateY(0) !important;
-  }
-  .elementor-55 .elementor-nav-menu--main li.menu-item-has-children:hover .sub-arrow svg {
-    transform: rotate(180deg) !important;
-  }
-  .elementor-55 .elementor-nav-menu--main .sub-menu a {
-    font-family: "Poppins", Sans-serif !important;
-    font-size: 14px !important;
-    font-weight: 400 !important;
-    color: #FFFFFF !important;
-    fill: #FFFFFF !important;
-    padding: 10px 18px !important;
-    display: block !important;
-    text-decoration: none !important;
-    white-space: nowrap !important;
-    transition: background-color 0.2s ease, color 0.2s ease !important;
-  }
-  .elementor-55 .elementor-nav-menu--main .sub-menu li:first-child a {
-    border-top-left-radius: 10px !important;
-    border-top-right-radius: 10px !important;
-  }
-  .elementor-55 .elementor-nav-menu--main .sub-menu li:last-child a {
-    border-bottom-right-radius: 10px !important;
-    border-bottom-left-radius: 10px !important;
-  }
-  .elementor-55 .elementor-nav-menu--main .sub-menu a:hover,
-  .elementor-55 .elementor-nav-menu--main .sub-menu a:focus {
-    background-color: #96CCE8 !important;
-    color: #060505 !important;
-  }
+.elementor-55 .elementor-nav-menu--main li.menu-item-has-children {
+  position: relative !important;
+}
+.elementor-55 .elementor-nav-menu--main .sub-menu {
+  position: absolute !important;
+  top: calc(100% + 6px) !important;
+  left: 13px !important;
+  min-width: 220px !important;
+  background-color: #008CD3 !important;
+  border-radius: 10px !important;
+  padding: 6px 0 !important;
+  margin: 0 !important;
+  list-style: none !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateY(6px) !important;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease !important;
+  z-index: 10000 !important;
+}
+.elementor-55 .elementor-nav-menu--main li.menu-item-has-children:hover > .sub-menu,
+.elementor-55 .elementor-nav-menu--main li.menu-item-has-children:focus-within > .sub-menu {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+.elementor-55 .elementor-nav-menu--main .sub-menu li {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.elementor-55 .elementor-nav-menu--main .sub-menu a {
+  font-family: 'Poppins', Sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
+  padding: 8px 18px !important;
+  display: block !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  transition: background-color 0.2s ease, color 0.2s ease !important;
+}
+.elementor-55 .elementor-nav-menu--main .sub-menu li:first-child a {
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+}
+.elementor-55 .elementor-nav-menu--main .sub-menu li:last-child a {
+  border-bottom-right-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
+}
+.elementor-55 .elementor-nav-menu--main .sub-menu a:hover,
+.elementor-55 .elementor-nav-menu--main .sub-menu a:focus,
+.elementor-55 .elementor-nav-menu--main .sub-menu a.elementor-item-active {
+  background-color: #96CCE8 !important;
+  color: #060505 !important;
+  fill: #060505 !important;
 }
 
 /* Right Group: CTA Buttons */
 .elementor-55 .elementor-element-41bec5d {
   display: flex !important;
   flex-direction: row !important;
-  align-items: center !important;
-  justify-content: flex-end !important;
-  flex: 0 0 auto !important;
-  width: auto !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  flex: 0 0 30% !important;
+  width: 30% !important;
+  gap: 14px !important;
   margin: 0 !important;
-  padding: 0 !important;
+  padding: 10px !important;
 }
 .elementor-55 .elementor-element-97a2151 {
   display: flex !important;
   flex-direction: row !important;
-  align-items: center !important;
-  justify-content: flex-end !important;
-  flex: 0 0 auto !important;
-  width: auto !important;
-  gap: 16px !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  width: 100% !important;
+  gap: 14px !important;
   margin: 0 !important;
-  padding: 0 !important;
+  padding: 10px !important;
 }
 
-/* Sign Up Button + 'for 14-day trial' Stack */
+/* Sign Up Button + 'for 7-day trial' Stack */
 .elementor-55 .elementor-element-3b6a7c3 {
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
-  justify-content: center !important;
-  flex: 0 0 auto !important;
-  width: auto !important;
+  justify-content: space-evenly !important;
+  flex: 0 0 61% !important;
+  width: 61% !important;
+  gap: 20px !important;
   margin: 0 !important;
   padding: 0 !important;
-  position: relative !important;
 }
 .elementor-55 .elementor-element-2270f5f {
-  display: flex !important;
-  align-items: center !important;
-  flex: 0 0 auto !important;
-  width: auto !important;
   margin: 0 !important;
   padding: 0 !important;
 }
 .elementor-55 .elementor-element-2270f5f .elementor-button {
   background-color: #ED1E79 !important;
-  font-family: "Poppins", Sans-serif !important;
+  font-family: 'Poppins', Sans-serif !important;
   font-size: 14px !important;
   font-weight: 500 !important;
   line-height: 1.2em !important;
   fill: #FFFFFF !important;
   color: #FFFFFF !important;
-  border: 2px solid #ED1E79 !important;
+  border: 2px solid #FFFFFF !important;
   border-radius: 10px !important;
-  padding: 10px 18px !important;
-  height: 42px !important;
-  box-sizing: border-box !important;
-  display: inline-flex !important;
-  align-items: center !important;
+  padding: 15px 15px !important;
+  display: inline-block !important;
   text-decoration: none !important;
   transition: all 0.2s ease !important;
-  margin: 0 !important;
+  box-sizing: border-box !important;
 }
 .elementor-55 .elementor-element-2270f5f .elementor-button:hover,
 .elementor-55 .elementor-element-2270f5f .elementor-button:focus {
@@ -302,7 +319,7 @@ header.elementor-55.elementor-location-header {
   display: flex !important;
   flex-direction: row-reverse !important;
   align-items: center !important;
-  gap: 10px !important;
+  gap: 11px !important;
 }
 .elementor-55 .elementor-element-2270f5f .elementor-button-icon {
   display: inline-flex !important;
@@ -313,36 +330,30 @@ header.elementor-55.elementor-location-header {
   height: 14px !important;
   fill: currentColor !important;
 }
+.elementor-55 .elementor-element-2270f5f .elementor-button-text {
+  font-family: 'Poppins', Sans-serif !important;
+}
 
-/* Caption under Sign Up Now */
+/* Trial Text */
 .elementor-55 .e-aaa0a9c-cdf690f {
-  position: absolute !important;
-  top: 100% !important;
-  left: 0 !important;
-  right: 0 !important;
-  margin: 6px 0 0 0 !important;
-  padding: 0 !important;
-  font-family: "Poppins", Sans-serif !important;
+  font-family: 'Poppins', Sans-serif !important;
   font-weight: 600 !important;
-  font-size: 12px !important;
-  color: #1A1A1A !important;
-  line-height: 1.2 !important;
+  font-size: 13px !important;
+  line-height: 19.5px !important;
+  color: #333333 !important;
+  margin-top: -14px !important;
+  margin-bottom: 0 !important;
   text-align: center !important;
-  white-space: nowrap !important;
 }
 
 /* Login Button */
 .elementor-55 .elementor-element-d97f3af {
-  display: flex !important;
-  align-items: center !important;
-  flex: 0 0 auto !important;
-  width: auto !important;
   margin: 0 !important;
   padding: 0 !important;
 }
 .elementor-55 .elementor-element-d97f3af .elementor-button {
   background-color: #FFFFFF !important;
-  font-family: "Poppins", Sans-serif !important;
+  font-family: 'Poppins', Sans-serif !important;
   font-size: 16px !important;
   font-weight: 500 !important;
   line-height: 1.2em !important;
@@ -350,27 +361,24 @@ header.elementor-55.elementor-location-header {
   color: #008CD3 !important;
   border: 2px solid #008CD3 !important;
   border-radius: 10px !important;
-  padding: 10px 18px !important;
-  height: 42px !important;
-  box-sizing: border-box !important;
-  display: inline-flex !important;
-  align-items: center !important;
+  padding: 12px 24px !important;
+  display: inline-block !important;
   text-decoration: none !important;
   transition: all 0.2s ease !important;
-  margin: 0 !important;
+  box-sizing: border-box !important;
 }
 .elementor-55 .elementor-element-d97f3af .elementor-button:hover,
 .elementor-55 .elementor-element-d97f3af .elementor-button:focus {
-  background-color: #008CD3 !important;
-  color: #FFFFFF !important;
-  fill: #FFFFFF !important;
+  background-color: #FFFFFF !important;
+  color: #008CD3 !important;
+  fill: #008CD3 !important;
   border-color: #008CD3 !important;
 }
 .elementor-55 .elementor-element-d97f3af .elementor-button-content-wrapper {
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
-  gap: 10px !important;
+  gap: 12px !important;
 }
 .elementor-55 .elementor-element-d97f3af .elementor-button-icon {
   display: inline-flex !important;
@@ -382,7 +390,16 @@ header.elementor-55.elementor-location-header {
   fill: currentColor !important;
 }
 
-/* Tablet & Mobile Nav Responsive Rules */
+/* Mobile & Tablet Styles */
+@media (min-width: 1025px) {
+  .elementor-55 .elementor-menu-toggle {
+    display: none !important;
+  }
+  .elementor-55 .elementor-nav-menu--dropdown.elementor-nav-menu__container {
+    display: none !important;
+  }
+}
+
 @media (max-width: 1024px) {
   .elementor-55 .elementor-nav-menu--main {
     display: none !important;
@@ -392,66 +409,88 @@ header.elementor-55.elementor-location-header {
     align-items: center !important;
     justify-content: center !important;
     cursor: pointer !important;
-    margin-left: 16px !important;
+    width: 35px !important;
+    height: 35px !important;
+    background-color: #ED1E79 !important;
+    border-radius: 6px !important;
+    padding: 6px !important;
+    box-sizing: border-box !important;
   }
   .elementor-55 .elementor-menu-toggle svg {
-    width: 22px !important;
-    height: 22px !important;
-    fill: #1A1A1A !important;
+    fill: #FFFFFF !important;
+    width: 20px !important;
+    height: 20px !important;
   }
-  .elementor-55 .elementor-menu-toggle .elementor-menu-toggle__icon--close {
+  .elementor-55 .elementor-menu-toggle__icon--close {
     display: none !important;
   }
-  .elementor-55 .elementor-menu-toggle.is-active .elementor-menu-toggle__icon--open {
+  .elementor-55 .elementor-menu-toggle.elementor-active .elementor-menu-toggle__icon--open {
     display: none !important;
   }
-  .elementor-55 .elementor-menu-toggle.is-active .elementor-menu-toggle__icon--close {
+  .elementor-55 .elementor-menu-toggle.elementor-active .elementor-menu-toggle__icon--close {
     display: block !important;
   }
-  .elementor-55 .elementor-nav-menu--dropdown {
+  .elementor-55 .elementor-nav-menu--dropdown.elementor-nav-menu__container {
+    display: none;
     position: absolute !important;
     top: 100% !important;
     left: 0 !important;
     width: 100% !important;
     background-color: #008CD3 !important;
-    padding: 16px 24px !important;
-    display: none !important;
+    border-radius: 0 0 10px 10px !important;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+    padding: 12px 20px !important;
     z-index: 10000 !important;
+    box-sizing: border-box !important;
   }
-  .elementor-55 .elementor-nav-menu--dropdown.is-active {
+  .elementor-55 .elementor-nav-menu--dropdown.elementor-nav-menu__container.elementor-active {
     display: block !important;
   }
-  .elementor-55 .elementor-nav-menu--dropdown ul {
+  .elementor-55 .elementor-nav-menu--dropdown ul.elementor-nav-menu {
     list-style: none !important;
-    margin: 0 !important;
     padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
   }
-  .elementor-55 .elementor-nav-menu--dropdown li {
-    margin: 8px 0 !important;
-    list-style: none !important;
-  }
-  .elementor-55 .elementor-nav-menu--dropdown a {
-    color: #FFFFFF !important;
-    font-family: "Poppins", Sans-serif !important;
-    font-size: 16px !important;
+  .elementor-55 .elementor-nav-menu--dropdown .elementor-item {
+    font-family: 'Poppins', Sans-serif !important;
+    font-size: 15px !important;
     font-weight: 500 !important;
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 8px 12px !important;
+  }
+  .elementor-55 .elementor-nav-menu--dropdown .elementor-sub-item {
+    font-family: 'Poppins', Sans-serif !important;
+    font-size: 14px !important;
+    color: #E0F2FE !important;
     text-decoration: none !important;
     display: block !important;
-    padding: 8px 0 !important;
+    padding: 6px 20px !important;
   }
-  .elementor-55 .elementor-nav-menu--dropdown .sub-menu {
-    padding-left: 20px !important;
-    list-style: none !important;
+  .elementor-55 .elementor-element-e7376c1 {
+    width: 50% !important;
+    justify-content: flex-start !important;
+  }
+  .elementor-55 .elementor-element-41bec5d {
+    width: 50% !important;
+    justify-content: flex-end !important;
   }
 }
 
 @media (max-width: 767px) {
   .elementor-55 .elementor-element-3c6acfc,
   .elementor-55 .e-3c6acfc-62e36c9 {
-    flex-wrap: wrap !important;
-    padding: 10px 16px !important;
-    justify-content: space-between !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 8px 12px !important;
+    min-height: auto !important;
+    gap: 8px !important;
   }
   .elementor-55 .elementor-element-e7376c1 {
     width: 100% !important;
@@ -460,179 +499,18 @@ header.elementor-55.elementor-location-header {
   .elementor-55 .elementor-element-41bec5d {
     width: 100% !important;
     justify-content: center !important;
-    margin-top: 10px !important;
+    margin-top: 5px !important;
   }
   .elementor-55 .elementor-element-2270f5f .elementor-button,
   .elementor-55 .elementor-element-d97f3af .elementor-button {
-    font-size: 13px !important;
-    padding: 8px 14px !important;
+    font-size: 11px !important;
+    padding: 8px 12px !important;
+  }
+  .elementor-55 .e-aaa0a9c-cdf690f {
+    font-size: 9px !important;
+    margin-top: -6px !important;
   }
 }
-
-/* ====================================================================
-   APPROVED STUDY GUIDE BODY STYLES (SCOPED UNDER #study-guide-page)
-   ==================================================================== */
-/* ====================================================================
-   STUDY GUIDE MODULE BASE ROOT (ISOLATED WRAPPER)
-   ==================================================================== */
-#study-guide-page {
-  font-family: var(--font-display);
-  background: var(--cream);
-  color: var(--ink);
-  overflow-x: hidden;
-  position: relative;
-  width: 100%;
-  line-height: 1.5;
-}
-/* ====================================================================
-   THE LIVING LEARNING CONTINUUM (PAGE-WIDE CONNECTING SPINE)
-   ==================================================================== */
-#study-guide-page .living-spine {
-  position: fixed;
-  left: 28px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(180deg, 
-    rgba(168, 0, 90, 0) 0%,
-    rgba(168, 0, 90, 0.4) 15%,
-    rgba(9, 96, 160, 0.5) 50%,
-    rgba(168, 0, 90, 0.4) 85%,
-    rgba(168, 0, 90, 0) 100%
-  );
-  z-index: 99;
-  pointer-events: none;
-  opacity: 0.7;
-}
-
-@media (max-width: 768px) {
-  #study-guide-page .living-spine { display: none; }
-}
-
-/* ====================================================================
-   ACT 1: THE HERO CAMPAIGN CANVAS
-   Art-directed hero with 100% visible, unobstructed campaign image
-   ==================================================================== */
-#study-guide-page .hero-campaign {
-  position: relative;
-  min-height: calc(100vh - 125px);
-  padding: 40px 24px 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: var(--cream);
-  overflow: hidden;
-}
-
-#study-guide-page .hero-grid {
-  position: relative;
-  z-index: 2;
-  max-width: 1360px;
-  margin: 0 auto;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 48px;
-  align-items: center;
-}
-
-@media (min-width: 1024px) {
-  #study-guide-page .hero-grid {
-    grid-template-columns: 1.05fr 1.15fr;
-    gap: 56px;
-  }
-}
-
-#study-guide-page .hero-copy-column {
-  max-width: 660px;
-}
-
-#study-guide-page .hero-display-h1 {
-  font-size: clamp(2.1rem, 4.6vw, 3.8rem);
-  font-weight: 900;
-  line-height: 1.06;
-  letter-spacing: -0.035em;
-  color: var(--ink);
-  margin-bottom: 20px;
-}
-#study-guide-page .h1-clip-line {
-  display: block;
-  overflow: hidden;
-}
-#study-guide-page .h1-text-reveal {
-  display: block;
-  transform: translateY(0);
-}
-
-#study-guide-page .hero-lead-text {
-  font-size: clamp(1rem, 1.8vw, 1.18rem);
-  font-weight: 400;
-  color: var(--ink-secondary);
-  line-height: 1.58;
-  max-width: 560px;
-  margin-bottom: 28px;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-#study-guide-page .hero-actions-cluster {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 16px;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-#study-guide-page .btn-primary-glow {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 16px 36px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--white);
-  background: var(--berry);
-  border-radius: 12px;
-  text-decoration: none;
-  box-shadow: 0 8px 28px var(--berry-glow);
-  transition: background var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
-}
-#study-guide-page .btn-primary-glow:hover {
-  background: #8E004B;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 36px var(--berry-glow);
-}
-#study-guide-page .btn-primary-glow svg {
-  transition: transform 0.25s ease;
-}
-#study-guide-page .btn-primary-glow:hover svg {
-  transform: translateX(4px);
-}
-#study-guide-page .btn-primary-glow:active { transform: scale(0.98); }
-
-#study-guide-page .btn-editorial-ghost {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 15px 28px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--ink);
-  background: rgba(255, 255, 255, 0.7);
-  border: 1.5px solid var(--border-medium);
-  border-radius: 12px;
-  backdrop-filter: blur(8px);
-  cursor: pointer;
-  transition: all var(--dur-fast) ease;
-}
-#study-guide-page .btn-editorial-ghost:hover {
-  border-color: var(--berry);
-  color: var(--berry);
-  background: var(--white);
-  transform: translateY(-1px);
-}
-
 
 
 /* ====================================================================
@@ -1349,12 +1227,6 @@ header.elementor-55.elementor-location-header {
     box-sizing: border-box !important;
   }
 
-  /* Compact Desktop Nav Items to fit perfectly inside 1200px container */
-  .elementor-55 .elementor-nav-menu--main .elementor-item {
-    font-size: 13.5px !important;
-    padding: 8px 9px !important;
-    white-space: nowrap !important;
-  }
 
   .elementor-55 .elementor-element-3c6acfc {
     max-width: 100% !important;
@@ -4172,14 +4044,14 @@ table {
   <!-- Locked Site Chrome Header (Elementor 55 from https://blastlearning.in/) -->
   <header data-elementor-type="header" data-elementor-id="55" class="elementor elementor-55 elementor-location-header" data-elementor-post-type="elementor_library">
 			<header class="elementor-element elementor-element-3c6acfc e-con e-atomic-element e-flexbox-base e-3c6acfc-62e36c9 " data-id="3c6acfc" data-element_type="e-flexbox" data-e-type="e-flexbox" data-interaction-id="3c6acfc">
-    <div class="elementor-element elementor-element-e7376c1 e-con-full e-flex wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no wpr-column-slider-no wpr-equal-height-no e-con e-parent" data-id="e7376c1" data-element_type="container" data-e-type="container">
+    <div class="elementor-element elementor-element-e7376c1 e-con-full e-flex wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no wpr-column-slider-no wpr-equal-height-no e-con e-parent e-lazyloaded" data-id="e7376c1" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-1699c44 elementor-widget-mobile__width-initial elementor-widget elementor-widget-image" data-id="1699c44" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
-															<img width="117" height="59" src="data:image/png;base64,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" class="attachment-full size-full wp-image-57" alt="Blast Learning" decoding="async" />															</div>
+															<img width="117" height="59" src="data:image/png;base64,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" class="attachment-full size-full wp-image-57" alt="">															</div>
 				<div class="elementor-element elementor-element-a9d4c74 elementor-nav-menu--stretch elementor-nav-menu__align-end elementor-nav-menu__text-align-center elementor-widget-mobile__width-initial elementor-nav-menu--dropdown-tablet elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="a9d4c74" data-element_type="widget" data-e-type="widget" data-settings="{&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;svg aria-hidden=\&quot;true\&quot; class=\&quot;e-font-icon-svg e-fas-angle-down\&quot; viewBox=\&quot;0 0 320 512\&quot; xmlns=\&quot;http:\/\/www.w3.org\/2000\/svg\&quot;&gt;&lt;path d=\&quot;M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z\&quot;&gt;&lt;\/path&gt;&lt;\/svg&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle_icon_hover_animation&quot;:&quot;pulse&quot;,&quot;full_width&quot;:&quot;stretch&quot;,&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
 								<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-slide">
-				<ul id="menu-1-a9d4c74" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-53"><a href="https://blastlearning.in/" class="elementor-item">Home</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-20 current_page_item menu-item-has-children menu-item-52"><a href="https://blastlearning.in/courses/" aria-current="page" class="elementor-item elementor-item-active">Courses</a>
-<ul class="sub-menu elementor-nav-menu--dropdown">
+				<ul id="menu-1-a9d4c74" class="elementor-nav-menu" data-smartmenus-id="17953470947554043"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-18 current_page_item menu-item-53"><a href="https://blastlearning.in/" aria-current="page" class="elementor-item elementor-item-active">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-52"><a href="https://blastlearning.in/courses/" class="elementor-item has-submenu" id="sm-17953470947554043-1" aria-haspopup="true" aria-controls="sm-17953470947554043-2" aria-expanded="false">Courses<span class="sub-arrow"><svg aria-hidden="true" class="e-font-icon-svg e-fas-angle-down" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path></svg></span></a>
+<ul class="sub-menu elementor-nav-menu--dropdown" id="sm-17953470947554043-2" role="group" aria-hidden="true" aria-labelledby="sm-17953470947554043-1" aria-expanded="false">
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-516"><a href="https://blastlearning.in/courses/math-genius-maker/" class="elementor-sub-item">Math Genius Maker</a></li>
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1392"><a href="#" class="elementor-sub-item elementor-item-active" aria-current="page">Study Guide</a></li>
 </ul>
@@ -4188,12 +4060,12 @@ table {
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50"><a href="https://blastlearning.in/about-us/" class="elementor-item">About Us</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49"><a href="https://blastlearning.in/contact/" class="elementor-item">Contact</a></li>
 </ul>			</nav>
-					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false" style="">
 			<svg aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open elementor-animation-pulse e-font-icon-svg e-fas-bars" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg><svg aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close elementor-animation-pulse e-font-icon-svg e-eicon-close" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M742 167L500 408 258 167C246 154 233 150 217 150 196 150 179 158 167 167 154 179 150 196 150 212 150 229 154 242 171 254L408 500 167 742C138 771 138 800 167 829 196 858 225 858 254 829L496 587 738 829C750 842 767 846 783 846 800 846 817 842 829 829 842 817 846 804 846 783 846 767 842 750 829 737L588 500 833 258C863 229 863 200 833 171 804 137 775 137 742 167Z"></path></svg>		</div>
-					<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
-				<ul id="menu-2-a9d4c74" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-53"><a href="https://blastlearning.in/" class="elementor-item" tabindex="-1">Home</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-20 current_page_item menu-item-has-children menu-item-52"><a href="https://blastlearning.in/courses/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Courses</a>
-<ul class="sub-menu elementor-nav-menu--dropdown">
+					<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true" style="width: 1407px; left: 0px; top: 44px;">
+				<ul id="menu-2-a9d4c74" class="elementor-nav-menu" data-smartmenus-id="1795347094757851"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-18 current_page_item menu-item-53"><a href="https://blastlearning.in/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-52"><a href="https://blastlearning.in/courses/" class="elementor-item has-submenu" tabindex="-1" id="sm-1795347094757851-1" aria-haspopup="true" aria-controls="sm-1795347094757851-2" aria-expanded="false">Courses<span class="sub-arrow"><svg aria-hidden="true" class="e-font-icon-svg e-fas-angle-down" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path></svg></span></a>
+<ul class="sub-menu elementor-nav-menu--dropdown" id="sm-1795347094757851-2" role="group" aria-hidden="true" aria-labelledby="sm-1795347094757851-1" aria-expanded="false">
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-516"><a href="https://blastlearning.in/courses/math-genius-maker/" class="elementor-sub-item" tabindex="-1">Math Genius Maker</a></li>
 	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1392"><a href="#" class="elementor-sub-item elementor-item-active" aria-current="page" tabindex="-1">Study Guide</a></li>
 </ul>
@@ -4204,7 +4076,7 @@ table {
 </ul>			</nav>
 						</div>
 				</div>
-		<div class="elementor-element elementor-element-41bec5d e-con-full e-flex wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no wpr-column-slider-no wpr-equal-height-no e-con e-parent" data-id="41bec5d" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-41bec5d e-con-full e-flex wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no wpr-column-slider-no wpr-equal-height-no e-con e-parent e-lazyloaded" data-id="41bec5d" data-element_type="container" data-e-type="container">
 		<div class="elementor-element elementor-element-97a2151 e-con-full e-flex wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no wpr-column-slider-no wpr-equal-height-no e-con e-child" data-id="97a2151" data-element_type="container" data-e-type="container">
 		<div class="elementor-element elementor-element-3b6a7c3 e-con-full e-flex wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no wpr-column-slider-no wpr-equal-height-no e-con e-child" data-id="3b6a7c3" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-2270f5f elementor-widget elementor-widget-button" data-id="2270f5f" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
@@ -4231,6 +4103,7 @@ table {
 				</div>
 		
 </header>
+		</header>
 
   <main>
     <!-- ====================================================================
