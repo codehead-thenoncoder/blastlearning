@@ -2830,6 +2830,13 @@ to {
   gap: 1rem;
 }
 }
+/* Keep campaign content readable if Elementor delays inline script execution. */
+#blast-ai-tutor .reveal-on-scroll {
+  animation: blastRevealFallback 0.01s forwards;
+}
+@keyframes blastRevealFallback {
+  to { opacity: 1; transform: translateY(0); }
+}
 </style>
 
 <!-- Main Embeddable Content (Between Global Header 55 & Footer 185) -->
@@ -3911,8 +3918,9 @@ function initReadingProgressBar() {
 }
 
 /* 03. SCROLL REVEAL ENTRANCE ANIMATIONS */
-function initScrollReveal() {
-  const reveals = document.querySelectorAll('.reveal-on-scroll');
+function initScrollReveal(root = document.getElementById('blast-ai-tutor')) {
+  if (!root) return;
+  const reveals = root.querySelectorAll('.reveal-on-scroll');
   if (!('IntersectionObserver' in window)) {
     reveals.forEach(r => r.classList.add('is-revealed'));
     return;
@@ -3932,14 +3940,15 @@ function initScrollReveal() {
 }
 
 /* 04. SMOOTH SCROLLING WITH OFFSET */
-function initSmoothScroll() {
+function initSmoothScroll(root = document.getElementById('blast-ai-tutor')) {
+  if (!root) return;
   const navHeight = 80;
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  root.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
       if (!targetId || targetId === '#') return;
 
-      const targetEl = document.querySelector(targetId);
+      const targetEl = root.querySelector(targetId);
       if (targetEl) {
         e.preventDefault();
         const elementPosition = targetEl.getBoundingClientRect().top + window.pageYOffset;
@@ -4339,11 +4348,20 @@ function initPlanPickerListeners() {
     registrationState.formData.billingPlan = 'all_access_1699';
   };
 
-  document.addEventListener('DOMContentLoaded', () => {
+  function initializeRegistration() {
+    const root = document.getElementById('blast-ai-tutor');
+    if (!root || root.dataset.blastRegistrationInitialized === 'true') return;
+    root.dataset.blastRegistrationInitialized = 'true';
     initBoardSelector();
     initPhoneFormatting();
     initTrialFormSubmission();
-  });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeRegistration, { once: true });
+  } else {
+    initializeRegistration();
+  }
 
   /* --------------------------------------------------------------------------
      01. BOARD SELECTOR (CBSE / ICSE / State board)
@@ -4599,3 +4617,40 @@ function initPlanPickerListeners() {
 
 })();
 </script>
+
+<script>
+/* Elementor-safe page initialisation.
+   HTML widgets can be rendered after DOMContentLoaded, so initialise immediately
+   when the wrapper is already present and guard against duplicate execution. */
+(function () {
+  'use strict';
+  const root = document.getElementById('blast-ai-tutor');
+  if (!root || root.dataset.blastPageInitialized === 'true') return;
+  root.dataset.blastPageInitialized = 'true';
+
+  const start = function () {
+    if (!document.getElementById('blast-ai-tutor')) return;
+    try { initReadingProgressBar(); } catch (error) { console.warn('Blast progress init:', error); }
+    try { initScrollReveal(root); } catch (error) {
+      console.warn('Blast reveal init:', error);
+      root.querySelectorAll('.reveal-on-scroll').forEach(function (el) {
+        el.classList.add('is-revealed');
+      });
+    }
+    try { initSmoothScroll(root); } catch (error) { console.warn('Blast scroll init:', error); }
+    try { initHeroPrismParticles(); } catch (error) { console.warn('Blast prism init:', error); }
+    try { initEnhancedGoldilocksSimulator(); } catch (error) { console.warn('Blast Goldilocks init:', error); }
+    try { initEnhancedTimelineInspector(); } catch (error) { console.warn('Blast timeline init:', error); }
+    try { initPricingFormSync(); } catch (error) { console.warn('Blast pricing init:', error); }
+    try { initFaqAccordion(); } catch (error) { console.warn('Blast FAQ init:', error); }
+    try { initPlanPickerListeners(); } catch (error) { console.warn('Blast plan picker init:', error); }
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', start, { once: true });
+  } else {
+    start();
+  }
+})();
+</script>
+
