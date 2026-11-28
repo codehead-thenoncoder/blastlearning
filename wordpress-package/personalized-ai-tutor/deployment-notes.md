@@ -62,7 +62,15 @@ The following URLs are referenced directly in `landing-page-elementor.html` and 
 
 ## 5. SEO & Social Metadata Configuration (WordPress)
 
-The SEO title, description, canonical, social cards, hreflang, favicon references, and JSON-LD have intentionally been removed from the Elementor HTML widget. Configure them in WordPress/Yoast (or the site's active SEO plugin) using the supplied **“Meta Tags — Personalized AI Tutor Page (blastlearning.in)”** document. Do not paste a second copy into the body HTML widget.
+Configure the SEO title, meta description, canonical URL, Open Graph/Twitter cards, and other head metadata in WordPress/Yoast using the supplied **“Meta Tags — Personalized AI Tutor Page (blastlearning.in)”** document. Do not duplicate those tags inside the Elementor HTML widget.
+
+### Structured data (JSON-LD)
+
+The Elementor HTML package now includes one valid JSON-LD script containing page-specific **Course**, **Product**, and **FAQPage** entities. The FAQ entries mirror the five questions and answers visible in the page. The script deliberately references Yoast's global Organization entity (https://blastlearning.in/#organization) rather than duplicating Yoast's Organization, WebSite, WebPage, and Breadcrumb graph.
+
+Do not paste another copy of this JSON-LD into Yoast. Keep Yoast's global schema enabled. After the page is published, validate the rendered page source and structured data. The JSON-LD currently uses the URL specified in the supplied meta-tags document: https://blastlearning.in/courses-personalized-ai-tutor/. Confirm the actual WordPress permalink is exactly this URL; if it differs, update the page-specific JSON-LD IDs and URLs in the HTML package to match the final permalink and Yoast canonical.
+
+The structured data describes the visible ₹1,699/month subscription and seven-day trial. Do not add review ratings, return-policy claims, or social profile URLs until they are real and visibly supported. Google does not guarantee rich-result display for any valid schema type; FAQ rich results are generally limited to authoritative government and health sites.
 
 ### Primary values from the supplied meta-tags document
 - **SEO Title**: `AI Tutor for CBSE & ICSE Students, Classes 6 to 12 | Blast Learning`
