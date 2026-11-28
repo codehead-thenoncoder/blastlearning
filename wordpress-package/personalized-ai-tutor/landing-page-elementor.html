@@ -4433,8 +4433,9 @@ function initPlanPickerListeners() {
 
       // Reveal the Edmission CRM form only after the existing on-page validation passes.
       // The CRM iframe owns the actual registration/lead submission from this point onward.
-      const crmContainer = root.querySelector('#edmission-form-container');
-      const crmFrame = root.querySelector('#edmission-registration-iframe');
+      const pageRoot = document.getElementById('blast-ai-tutor');
+      const crmContainer = pageRoot?.querySelector('#edmission-form-container');
+      const crmFrame = pageRoot?.querySelector('#edmission-registration-iframe');
 
       if (!crmContainer || !crmFrame) {
         handleBackendError(submitBtn, "The registration form could not be loaded. Please contact info@blastlearning.in or +91 87926 97655.");
