@@ -33,6 +33,15 @@ This document details the backend architectural audit of the live Blast Learning
 
 ## 2. On-Page Form Implementation (`#blast-trial-form`)
 
+### Current front-end handoff (updated)
+- The three-step on-page form validates the student's and parent's details first.
+- After successful client-side validation, the on-page form is hidden and the Edmission CRM iframe is revealed in the same form card:
+  `https://form.edmissioncrm.com/form-preview/9acce44c-fe1b-4e97-aec1-c7eaa7bfba19`
+- The iframe handles the actual CRM registration from that point onward. The page does not claim that a trial has been activated.
+- **Important limitation:** values entered in the first on-page form are not automatically transferred into the cross-origin Edmission iframe. The parent may need to enter the details again in Edmission. Prefill requires a documented Edmission-supported query-string/API mechanism; none has been supplied or assumed.
+- The previous browser POST to `/wp-json/blast/v1/trial-signup` has been removed from this landing-page form flow. The WordPress REST endpoint is not required for this iframe reveal behaviour.
+
+
 The approved on-page form remains embedded on the single landing page and captures the complete data payload:
 
 ```json
