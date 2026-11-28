@@ -4557,3 +4557,93 @@ function initPlanPickerListeners() {
 })();
 </script>
 
+
+<!-- Blast Learning: page-specific structured data. Yoast continues to manage title, description, canonical, and its global Organization/WebSite/WebPage graph. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Course",
+      "@id": "https://blastlearning.in/courses-personalized-ai-tutor/#course",
+      "name": "Personalized AI Tutor for CBSE and ICSE, Grades 6 to 12",
+      "description": "An AI tutor that learns each child's class, teacher expectations, and syllabus, then builds a personalized study plan and guides learning sessions. Covers Mathematics, Science, English, and Social Studies, with Math Genius Maker for foundational mathematics support.",
+      "provider": { "@id": "https://blastlearning.in/#organization" },
+      "educationalLevel": "Grades 6 to 12",
+      "inLanguage": "en-IN",
+      "audience": { "@type": "EducationalAudience", "educationalRole": "student" },
+      "teaches": ["Mathematics", "Science", "English", "Social Studies", "Study skills and self-management"],
+      "courseMode": "online",
+      "offers": {
+        "@type": "Offer",
+        "category": "Subscription",
+        "price": "1699.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://blastlearning.in/courses-personalized-ai-tutor/"
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://blastlearning.in/courses-personalized-ai-tutor/#product",
+      "name": "Blast Learning Personalized AI Tutor",
+      "description": "A personal AI tutor for CBSE and ICSE students in Grades 6 to 12. It learns the child's class, teacher expectations, and syllabus, then builds a personalized study plan.",
+      "brand": { "@id": "https://blastlearning.in/#organization" },
+      "category": "Education technology > Online tutoring > K-12",
+      "offers": {
+        "@type": "Offer",
+        "price": "1699.00",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://blastlearning.in/courses-personalized-ai-tutor/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://blastlearning.in/courses-personalized-ai-tutor/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does Blast know what my child's teacher expects?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Blast reads your child's lectures, notes, textbooks, and syllabus uploads. Using natural language processing, it identifies which sub-topics the teacher spends the most time on and tests frequently, aligning the study plan directly with school expectations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Blast compatible with both CBSE and ICSE boards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Blast includes comprehensive syllabus mappings for both CBSE and ICSE across Grades 6 through 12 for Mathematics, Science, English, and Social Studies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Learning Goldilocks Zone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Learning Goldilocks Zone is the optimal difficulty threshold where material is neither too easy, which causes boredom and passive skimming, nor too hard, which causes frustration and cognitive overload. Blast's dynamic calibration adjusts question difficulty in real time to keep your child in the peak retention zone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does billing work after the 7-day free trial?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "After your 7-day free trial, your membership continues automatically at ₹1,699 per month. You can cancel at any time directly from the parent dashboard."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I cancel during the 7-day free trial?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can cancel during the 7-day free trial from the parent dashboard."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
